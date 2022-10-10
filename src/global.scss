@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
+
+:root {
+  --font-default: 'Gemunu Libre', sans-serif;
+  --font-sz-p: 1.2rem;
+
+  --color-pri: #ffffff;
+  --color-sec: #111111;
+  --color-font: rgb(16, 143, 255);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: var(--font-default);
+  transition: all 0.2s ease;
+  // scroll-behavior: smooth;
+}
+
+/* all global css properties */
+
+:root {
+  /* fs = font_size */
+  --fs-h1: 4.86em;
+  --fs-h2: 3.86em;
+  --fs-h3: 2.86em;
+  --fs-h4: 2.08rem;
+  --fs-p: 1.39em;
+}
+
+@media screen and (max-width: 764px) {
+
+  // mobile sizes
+  :root {
+    /* fs = font_size */
+    --fs-h1: 4.86em;
+    --fs-h2: 3.86em;
+    --fs-h3: 2.86em;
+    --fs-h4: 2.08rem;
+    --fs-p: 1.39em;
+  }
+}
+
+// store light theme css properties
+.light {
+  --pri-col: white;
+}
+
+// store dark theme css properties
+.dark {
+  --pri-col: black;
+}
+
+// default stylings for specific tag
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  // line-height: 1.1;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  // line-height: 1.1;
+}
+
+h4 {
+  font-size: var(--fs-h4);
+  // line-height: 1.1;
+}
+
+h5 {
+  font-size: var(--fs-h5);
+  // line-height: 1.1;
+}
+
+h6 {
+  font-size: var(--fs-h6);
+  // line-height: 1.1;
+}
+
+p {
+  font-size: 1.39em;
+  line-height: 1.2;
+}
+
+// css for default style removing
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}

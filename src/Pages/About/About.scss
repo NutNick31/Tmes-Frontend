@@ -1,0 +1,35 @@
+.about {
+    .about_container {
+        width: 100%;
+
+        .Gsec_h2 {
+            font-size: 4rem;
+        }
+
+        .info_cards {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            article {
+                min-width: 300px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin: 2rem;
+                padding: 2rem;
+                border: 2px solid blue;
+                background-color: #EDEDED;
+            }
+        }
+
+        .head_name {
+            font-size: 4rem;
+        }
+    }
+
+    img {
+        height: 300px;
+    }
+}
