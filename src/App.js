@@ -2,8 +2,8 @@ import React from "react";
 import "./App.scss";
 
 import { Routes, Route } from "react-router-dom";
-import { Home, Error, Events, About, Navbar } from "./Pages";
-import { Footer } from "./Components";
+import { Home, Error, Events, About } from "./Pages";
+import { Footer, Navbar } from "./Components";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 // Git Problems Solved
