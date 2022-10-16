@@ -5,7 +5,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0, 0.4);
+    background-color: var(--color-pri);
     z-index: 1000;
     padding: 1rem 6rem;
 }
@@ -41,17 +41,15 @@
 .navbar-links_container p,
 .navbar-sign p,
 .navbar-menu_container p {
-    color: #fff;
+    color: var(--color-sec);
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.4rem;
     line-height: 25px;
     text-transform: capitalize;
 
     margin: 0 1rem;
     cursor: pointer;
-
-    transition: 0.3;
 
     &:hover {
         transform: scale(1.1);
@@ -62,7 +60,6 @@
 
     &:hover {
         color: var(--color-subtext);
-        letter-spacing: 0.2px;
     }
 
     &:after {
@@ -88,24 +85,26 @@
 .navbar-menu_container button {
     padding: 0.5rem 1rem;
     color: #fff;
-    background: #FF4820;
+    background: var(--color-subtext);
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.4rem;
     line-height: 25px;
+    text-transform: capitalize;
     border: none;
     outline: none;
     cursor: pointer;
     border-radius: 5px;
+    border: 2px solid var(--color-subtext);
 
     &:hover {
-        background: white;
+        background: var(--color-bg);
+        color: var(--color-sec)
     }
 }
 
 .navbar-menu {
-    margin-left: 1rem;
-
+    margin-right: 1rem;
     display: none;
     position: relative;
 }
@@ -121,7 +120,7 @@
     flex-direction: column;
 
     text-align: end;
-    background: var(--color-footer);
+    background: var(--color-pri);
     padding: 2rem;
     position: absolute;
     left: -50%;
@@ -129,6 +128,7 @@
     margin-top: 1rem;
     min-width: 210px;
     border-radius: 5px;
+    border: 2px solid var(--color-subtext);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 

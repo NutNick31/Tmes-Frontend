@@ -63,8 +63,8 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    background: #FF4820;
-    border: 2px solid #FF4820;
+    background: var(--color-subtext);
+    border: 2px solid var(--color-subtext);
     padding: 0 1rem;
     color: #fff;
     cursor: pointer;
@@ -73,8 +73,7 @@
     border-radius: 5px;
 
     &:hover {
-        background-color: var(--color-footer);
-        color: var(--color-subtext);
+        opacity: 0.8;
     }
 }
 
@@ -205,7 +204,7 @@
 }
 
 .Prof-content h4:last-child {
-    color: #ff8A71;
+    color: var(--color-subtext);
 }
 
 .Prof-content h1 {

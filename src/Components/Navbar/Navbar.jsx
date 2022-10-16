@@ -12,13 +12,13 @@ const Navbar = () => {
       <div className="navbar-menu">
         {toggleMenu ? (
           <RiCloseLine
-            color="#fff"
+            color="black"
             size={27}
             onClick={() => setToggleMenu(false)}
           />
         ) : (
           <RiMenuUnfoldFill
-            color="#fff"
+            color="black"
             size={27}
             onClick={() => setToggleMenu(true)}
           />
@@ -32,7 +32,12 @@ const Navbar = () => {
                 </Link>
               </p>
               <p>
-                <Link className="nav_li" to="">
+                <Link className="nav_li" to="/great-step">
+                  GreatStep
+                </Link>
+              </p>
+              <p>
+                <Link className="nav_li" to="/great-step/events">
                   Events
                 </Link>
               </p>
@@ -43,8 +48,12 @@ const Navbar = () => {
               </p>
             </div>
             <div className="navbar-menu_container-links-sign">
-              <p>Sign in</p>
-              <button type="button">Sign up</button>
+              <p>
+                <Link to="/signin"> Sign In</Link>
+              </p>
+              <button>
+                <Link to="/signup"> Sign up</Link>
+              </button>
             </div>
           </div>
         )}
@@ -60,7 +69,12 @@ const Navbar = () => {
             </Link>
           </p>
           <p>
-            <Link className="nav_li" to="/Events">
+            <Link className="nav_li" to="/great-step">
+              GreatStep
+            </Link>
+          </p>
+          <p>
+            <Link className="nav_li" to="/great-step/events">
               Events
             </Link>
           </p>
@@ -72,9 +86,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-sign">
-        <p className="nav_li">Sign in</p>
-        <button type="button" className="nav_li">
-          Sign up
+        <p>
+          <Link to="/signin"> Sign In</Link>
+        </p>
+        <button>
+          <Link to="/signup"> Sign up</Link>
         </button>
       </div>
     </div>

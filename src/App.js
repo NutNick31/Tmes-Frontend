@@ -3,6 +3,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { GreatStep, Error, Events, About } from "./Pages";
 import { Footer, Navbar } from "./Components";
+import TMES from "./TMES/TMES_landing/TMES";
 import "./App.scss";
 // Git Problems Solved
 // again
@@ -28,8 +29,8 @@ function App() {
       <div className="content">
         <Routes>
           {/* GreatStep Page */}
-          <Route exact path="/" element={<GreatStep />} />
-          <Route exact path="/GreatStep" element={<GreatStep />} />
+          <Route exact path="/" element={<TMES />} />
+          <Route exact path="/great-step" element={<GreatStep />} />
 
           {/* Offline Event Page */}
           <Route path="/great-step/events" element={<Events />} />
