@@ -1,13 +1,15 @@
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center !important;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-content {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
 
     margin-right: 5rem;
@@ -34,6 +36,7 @@
     margin: 2rem 0 1rem;
 
     display: flex;
+    justify-content: center;
     flex-direction: row;
 }
 
