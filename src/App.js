@@ -1,11 +1,9 @@
 import React from "react";
-import "./App.scss";
 
 import { Routes, Route } from "react-router-dom";
-import { Home, Error, Events, About } from "./Pages";
+import { GreatStep, Error, Events, About } from "./Pages";
 import { Footer, Navbar } from "./Components";
-
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.scss";
 // Git Problems Solved
 // again
 import {
@@ -29,26 +27,38 @@ function App() {
       <Navbar />
       <div className="content">
         <Routes>
-          {/* Home Page */}
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/Home" element={<Home />} />
+          {/* GreatStep Page */}
+          <Route exact path="/" element={<GreatStep />} />
+          <Route exact path="/GreatStep" element={<GreatStep />} />
 
           {/* Offline Event Page */}
-          <Route path="/Events" element={<Events />} />
-          <Route path="/Events/Enviro_CS" element={<Enviro_CS />} />
-          <Route path="/Events/Geobotics" element={<Geobotics />} />
-          <Route path="/Events/Indu_Design" element={<Indu_Design />} />
-          <Route path="/Events/Mine_CS" element={<Mine_CS />} />
-          <Route path="/Events/Mineac" element={<Mineac />} />
-          <Route path="/Events/Nmic" element={<Nmic />} />
-          <Route path="/Events/Petro_CS" element={<Petro_CS />} />
-          <Route path="/Events/Safety_DA" element={<Safety_DA />} />
-          <Route path="/Events/Safety_Hunt" element={<Safety_Hunt />} />
+          <Route path="/great-step/events" element={<Events />} />
+          <Route path="/great-step/events/Enviro_CS" element={<Enviro_CS />} />
+          <Route path="/great-step/events/Geobotics" element={<Geobotics />} />
+          <Route
+            path="/great-step/events/Indu_Design"
+            element={<Indu_Design />}
+          />
+          <Route path="/great-step/events/Mine_CS" element={<Mine_CS />} />
+          <Route path="/great-step/events/Mineac" element={<Mineac />} />
+          <Route path="/great-step/events/Nmic" element={<Nmic />} />
+          <Route path="/great-step/events/Petro_CS" element={<Petro_CS />} />
+          <Route path="/great-step/events/Safety_DA" element={<Safety_DA />} />
+          <Route
+            path="/great-step/events/Safety_Hunt"
+            element={<Safety_Hunt />}
+          />
 
           {/* Online Event Page */}
-          <Route path="/Events/T_Shirt_Design" element={<T_Shirt_Design />} />
-          <Route path="/Events/Quiz_Spiel" element={<Quiz_Spiel />} />
-          <Route path="/Events/Mine_Shot" element={<Mine_Shot />} />
+          <Route
+            path="/great-step/events/T_Shirt_Design"
+            element={<T_Shirt_Design />}
+          />
+          <Route
+            path="/great-step/events/Quiz_Spiel"
+            element={<Quiz_Spiel />}
+          />
+          <Route path="/great-step/events/Mine_Shot" element={<Mine_Shot />} />
 
           {/* About Page */}
           <Route path="/aboutus" element={<About />} />
