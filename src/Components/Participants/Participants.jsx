@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.scss";
+import "../Footer/Footer";
 
 const Participants = () => {
   return (

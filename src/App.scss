@@ -1,5 +1,5 @@
 .content {
-    max-width: 1440px;
+    max-width: 1560px;
     margin: 0 auto;
 }
 
@@ -7,7 +7,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -38,6 +37,14 @@ a {
 .gradient__text {
     background: var(--gradient-text);
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text__tmes {
+    background: var(--gradient-tmes);
+    background-clip: text;
+    font-size: 4rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

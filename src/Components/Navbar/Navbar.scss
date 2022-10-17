@@ -1,12 +1,17 @@
+nav {
+    background: linear-gradient(39.4deg, #f5ddff, #fff 50.21%, #fffcf1);
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
 .navbar {
+    max-width: 1560px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: var(--color-pri);
-    z-index: 1000;
     padding: 1rem 6rem;
 }
 

@@ -1,11 +1,9 @@
 import React from "react";
 import gpt3Logo from "../../Assets/dummy_logo.jpg";
 import "./Footer.scss";
-import Participants from "./Participants";
 
 const Footer = () => (
-  <>
-    <Participants />
+  <footer>
     <div className="foot section__padding">
       <div className="footer-links">
         <div className="footer-links_logo">
@@ -39,7 +37,7 @@ const Footer = () => (
         <p>@2022 TMES. All rights reserved.</p>
       </div>
     </div>
-  </>
+  </footer>
 );
 
 export default Footer;
