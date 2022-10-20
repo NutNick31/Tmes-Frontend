@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import EventName from "./Events_name";
+import { motion } from "framer-motion";
 
 const Events = () => {
   return (
     <>
-      <section className="events">
+      <motion.section
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="events"
+      >
         {EventName.map((eve) => {
           const { type, data } = eve;
           return (
@@ -22,7 +28,7 @@ const Events = () => {
             </div>
           );
         })}
-      </section>
+      </motion.section>
     </>
   );
 };

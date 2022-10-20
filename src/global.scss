@@ -7,20 +7,21 @@
   --font-sz-p: 1.2rem;
 
   --color-pri: #ffffff;
-  --color-sec: #111111;
+  --color-sec: #F9F4DA;
   --color-font: rgb(16, 143, 255);
 
   --font-family: 'Inconsolata', monospace;
 
-  --gradient-text: linear-gradient(89.97deg, #4280fb 1.84%, teal 102.67%);
-  --gradient-bar: linear-gradient(103.22deg, #3C4048 -13.86%, teal 99.55%);
-  --gradient-tmes: linear-gradient(89.97deg, #fb4242 1.84%, rgb(255, 179, 0) 102.67%);
+  --gradient-text: #638fe7;
+  // --gradient-text: linear-gradient(89.97deg, #a1c1ff 1.84%, rgb(110, 255, 255) 102.67%);
+  --gradient-tmes: #ffb14b;
+  // --gradient-tmes: linear-gradient(89.97deg, #fb4242 1.84%, rgb(255, 179, 0) 102.67%);
+  --gradiant_nav: black;
 
-  --color-bg: white;
-  --color-footer: rgb(1, 113, 113);
-  --color-blog: #042c54;
-  --color-text: #81AFDD;
+  --color-bg: black;
+  --color-text: #F9F4DA;
   --color-subtext: #08a4a7;
+  --color-footer: rgb(1, 113, 113);
 }
 
 * {
@@ -30,4 +31,5 @@
   scroll-behavior: smooth;
   font-family: var(--font-default);
   transition: all 0.2s ease;
+  color: var(--color-text);
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Footer, Navbar, Loader } from "./Components";
 import Routing from "./Routing";
+import "./Pages/Events/Offline_Events/Offline_Events.scss";
+import { AnimatePresence } from "framer-motion";
 
 import "./App.scss";
 
@@ -16,9 +18,11 @@ function App() {
     <div className="App">
       {loading && <Loader />}
       <>
-        <Navbar />
-        <Routing />
-        <Footer />
+        <AnimatePresence>
+          <Navbar />
+          <Routing />
+          <Footer />
+        </AnimatePresence>
       </>
     </div>
   );

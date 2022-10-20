@@ -8,13 +8,16 @@ import Typewriter from "typewriter-effect";
 import Prof2 from "./Prof2";
 import SkillsSlider from "./Skill_slider";
 import { C_Btn, Participants } from "../../Components";
-import styled from "styled-components";
-import { FaArrowDown } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Header = () => (
-  <div id="home">
-    <div className="header section__padding">
+  <motion.div
+    exit={{ opacity: 0 }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    id="home"
+  >
+    <motiondiv className="header section__padding">
       <div className="header-content">
         <div className="header-image">
           {/* <img src={logo} /> */}
@@ -41,14 +44,14 @@ const Header = () => (
           <C_Btn txt="Register Now" link="/signup"></C_Btn>
         </div>
       </div>
-    </div>
+    </motiondiv>
     <Brand />
     <Prof />
     <Prof2 />
     <Participants />
     <Swiper />
     <SkillsSlider />
-  </div>
+  </motion.div>
 );
 
 export default Header;

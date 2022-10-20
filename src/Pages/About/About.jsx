@@ -2,23 +2,29 @@ import React from "react";
 import "./About.scss";
 import CTH_data from "./CTH_data";
 import GSec from "./Gsec";
-import {AiFillFacebook} from 'react-icons/ai';
-import {BsInstagram} from 'react-icons/bs';
-import {BsTwitter} from 'react-icons/bs';
+import { AiFillFacebook } from "react-icons/ai";
+import { BsInstagram } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { motion } from "framer-motion";
 const About = () => {
   return (
-    <section className="about">
+    <motion.section
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="about"
+    >
       <div className="about_container">
         <section className="info_cards">
           <article>
             <h2>Head Of Department</h2>
             <h3>Prof. Sameer Kumar Pal</h3>
-           
-            <img src="https://source.unsplash.com/s3mR42Spras" alt="CTH"/>
-            <div className="links"> 
-            <AiFillFacebook className="icons1"/>
-            <BsInstagram className="icons2"/>
-            <BsTwitter className="icons3"/>
+
+            <img src="https://source.unsplash.com/s3mR42Spras" alt="CTH" />
+            <div className="links">
+              <AiFillFacebook className="icons1" />
+              <BsInstagram className="icons2" />
+              <BsTwitter className="icons3" />
             </div>
           </article>
           <article>
@@ -26,9 +32,9 @@ const About = () => {
             <h3>Prof. Rakesh Kumar</h3>
             <img src="https://source.unsplash.com/s3mR42Spras" alt="CTH" />
             <div className="links">
-            <AiFillFacebook className="icons1"/>
-            <BsInstagram className="icons2"/>
-            <BsTwitter className="icons3"/>
+              <AiFillFacebook className="icons1" />
+              <BsInstagram className="icons2" />
+              <BsTwitter className="icons3" />
             </div>
           </article>
         </section>
@@ -40,9 +46,9 @@ const About = () => {
             <h3>Sachin Jaiswal</h3>
             <img src="https://source.unsplash.com/s3mR42Spras" alt="CTH" />
             <div className="links">
-            <AiFillFacebook className="icons1"/>
-            <BsInstagram className="icons2"/>
-            <BsTwitter className="icons3"/>
+              <AiFillFacebook className="icons1" />
+              <BsInstagram className="icons2" />
+              <BsTwitter className="icons3" />
             </div>
           </article>
           <article>
@@ -50,9 +56,9 @@ const About = () => {
             <h3>Amit Kumar</h3>
             <img src="https://source.unsplash.com/s3mR42Spras" alt="CTH" />
             <div className="links">
-            <AiFillFacebook className="icons1"/>
-            <BsInstagram className="icons2"/>
-            <BsTwitter className="icons3"/>
+              <AiFillFacebook className="icons1" />
+              <BsInstagram className="icons2" />
+              <BsTwitter className="icons3" />
             </div>
           </article>
         </section>
@@ -69,18 +75,18 @@ const About = () => {
                   src="https://assets.website-files.com/60f85e33b5a89c61fcd8377d/61832145912efe370a5d9612_stela-v2-p-500.jpeg"
                   alt="G-Sec"
                 />
-                 <div className="links">
-                  <AiFillFacebook className="icons1"/>
-                  <BsInstagram className="icons2"/>
-                   <BsTwitter className="icons3"/>
-                  </div>
+                <div className="links">
+                  <AiFillFacebook className="icons1" />
+                  <BsInstagram className="icons2" />
+                  <BsTwitter className="icons3" />
+                </div>
                 {/* <img src={img} alt="G-Sec" /> */}
               </article>
             );
           })}
         </section>
       </div>
-      
+
       <div class="divider">
         <div></div>
       </div>
@@ -102,11 +108,11 @@ const About = () => {
                           src="https://assets.website-files.com/60f85e33b5a89c61fcd8377d/6119b7615f69af0e04b36579_francois-v5-p-500.jpeg"
                           alt="CTH"
                         />
-                         <div className="links">
-                          <AiFillFacebook className="icons1"/>
-                           <BsInstagram className="icons2"/>
-                          <BsTwitter className="icons3"/>
-                          </div>
+                        <div className="links">
+                          <AiFillFacebook className="icons1" />
+                          <BsInstagram className="icons2" />
+                          <BsTwitter className="icons3" />
+                        </div>
                         {/* <img src={img} alt="CTH" /> */}
                       </article>
                     );
@@ -117,9 +123,8 @@ const About = () => {
           })}
         </section>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
 export default About;
-
