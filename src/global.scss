@@ -1,27 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
 
 :root {
-  --font-default: 'Inconsolata', monospace;
-  --font-sz-p: 1.2rem;
-
-  --color-pri: #ffffff;
-  --color-sec: #F9F4DA;
-  --color-font: rgb(16, 143, 255);
-
+  --font-default: 'Fuzzy Bubbles', cursive;
   --font-family: 'Inconsolata', monospace;
 
-  --gradient-text: #638fe7;
-  // --gradient-text: linear-gradient(89.97deg, #a1c1ff 1.84%, rgb(110, 255, 255) 102.67%);
-  --gradient-tmes: #ffb14b;
-  // --gradient-tmes: linear-gradient(89.97deg, #fb4242 1.84%, rgb(255, 179, 0) 102.67%);
-  --gradiant_nav: black;
+  --font-sz-p: 1.2rem;
 
-  --color-bg: black;
-  --color-text: #F9F4DA;
+  // --gradient-text: linear-gradient(89.97deg, #a1c1ff 1.84%, rgb(110, 255, 255) 102.67%);
+  // --gradient-tmes: linear-gradient(89.97deg, #fb4242 1.84%, rgb(255, 179, 0) 102.67%);
+
+  --gradient-text: #6a5442;
+  --gradient-tmes: #ffb14b;
+  --gradiant_nav: rgb(255, 254, 254);
+
+  --color-pri: #ffffff;
+  --color-sec: #000000;
+  --color-bg: #FAF7F0;
+  --color-text: #000000;
   --color-subtext: #08a4a7;
-  --color-footer: rgb(1, 113, 113);
+  --color-footer: #79A3B1;
+  --color-events: #f8eaff;
+  --color-events-text: #ffaccc;
+  --color-about: #ddffea;
+  --color-about-text: #9ecc9b;
+  --color-about-cards: #cff4cd;
+  --color-great: #F9F9F9;
 }
 
 * {
@@ -29,7 +37,7 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  font-family: var(--font-default);
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
   color: var(--color-text);
+  font-family: var(--font-default);
 }

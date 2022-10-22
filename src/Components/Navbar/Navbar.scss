@@ -4,6 +4,10 @@ nav {
     z-index: 1000;
     top: 0;
     left: 0;
+
+    * {
+        font-family: 'Merienda', cursive
+    }
 }
 
 .navbar {
@@ -46,7 +50,7 @@ nav {
 .navbar-links_container p,
 .navbar-sign p,
 .navbar-menu_container p {
-    color: var(--color-sec);
+    color: var(--color-text);
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 1.4rem;
@@ -104,7 +108,7 @@ nav {
 
     &:hover {
         background: var(--color-bg);
-        color: var(--color-sec)
+        color: var(--color-text);
     }
 }
 

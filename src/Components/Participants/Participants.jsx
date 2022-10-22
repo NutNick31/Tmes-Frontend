@@ -1,5 +1,6 @@
 import React from "react";
 import "../Footer/Footer";
+import C_Btn from "../Button/Button";
 
 const Participants = () => {
   return (
@@ -18,10 +19,9 @@ const Participants = () => {
           <h3 className="gradient__text">Events </h3>
         </div>
       </div>
-
-      <div className="footer-btn">
-        <p>Register Now</p>
-      </div>
+      {/* <div style={{ margin: "4rem 0 0 0" }}>
+        <C_Btn txt="Register Now" link="/signup"></C_Btn>
+      </div> */}
     </>
   );
 };

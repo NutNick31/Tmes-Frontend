@@ -42,7 +42,7 @@ footer {
 
 .footer-btn {
     p {
-        font-size: 18px;
+        font-size: 2rem;
         font-family: var(--font-family);
         line-height: 21px;
         word-spacing: 2px;
@@ -84,9 +84,8 @@ footer {
 
 .footer-links_logo p {
     font-family: var(--font-family);
-    font-size: 12px;
-    line-height: 15px;
-    color: #fff;
+    font-size: 1.2rem;
+    color: var(--color-text);
 }
 
 .footer-links_div {
@@ -96,19 +95,17 @@ footer {
 }
 
 .footer-links_div h4 {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1.4rem;
     font-family: var(--font-family);
-    color: #fff;
+    color: var(--color-text);
 
     margin-bottom: 0.9rem;
 }
 
 .footer-links_div p {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 1.04rem;
     font-family: var(--font-family);
-    color: #fff;
+    color: var(--color-text);
 
     margin: 0.5rem 0;
     cursor: pointer;

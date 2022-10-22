@@ -17,13 +17,15 @@ function App() {
   return (
     <div className="App">
       {loading && <Loader />}
-      <>
-        <AnimatePresence>
-          <Navbar />
-          <Routing />
-          <Footer />
-        </AnimatePresence>
-      </>
+      {!loading && (
+        <>
+          <AnimatePresence>
+            <Navbar />
+            <Routing />
+            <Footer />
+          </AnimatePresence>
+        </>
+      )}
     </div>
   );
 }

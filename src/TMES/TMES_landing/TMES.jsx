@@ -4,6 +4,7 @@ import Brand from "./Brand";
 import Prof from "./Prof";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
+import { C_Btn } from "../../Components";
 
 const TMES = () => (
   <>
@@ -22,7 +23,7 @@ const TMES = () => (
         <p style={{ fontSize: "1.6rem" }} className="gradient__text">
           Presents
         </p> */}
-          <h1 className="gradient__text">
+          <h1 className="text__tmes">
             <Typewriter
               options={{
                 strings: ["WELCOME TO TMES"],
@@ -32,13 +33,14 @@ const TMES = () => (
             />
           </h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
-            iusto placeat soluta veritatis sequi, dicta aut in voluptatum
-            quaerat nam nemo, voluptate, molestias uuntur nisi iure ea qui.
+            Technology Mining Engineering Society (TMES) aims at bringing a
+            closer association among the students and faculty members in the
+            department. It has initiated Social Cultural and Sports Events,
+            which brings them together for a closer interaction.
           </p>
 
-          <div className="header-content__input">
-            <button type="button">Register Now</button>
+          <div style={{ margin: "4rem 0 0 0" }}>
+            <C_Btn txt="Register Now" link="/signup"></C_Btn>
           </div>
         </div>
 

@@ -36,9 +36,21 @@ const Header = () => (
           />
         </h1>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa iusto
-          placeat soluta veritatis sequi, dicta aut in voluptatum quaerat nam
-          nemo, voluptate, molestias uuntur nisi iure ea qui.
+          Upholding the esteem of being the antecedent, the Department of Mining
+          Engineering, IIT Kharagpur has always believed in the flow of
+          practical knowledge with innovation as inspiration, which has
+          rejuvenated the ancestral engineering ideals into the modern facts.
+        </p>
+        <p>
+          With this vision as guidance and zeal to keep pace with the
+          developments in the Mining and Geology industries, the Department of
+          Mining engineering initiated GREATSTEP (acronym for Geo-Resource
+          Engineering and Technology Students' Teachers' and Employers'
+          Partnership) in 2008 to create a common platform for all the budding
+          Mining engineers. The last seven editions were filled with mind
+          churning challenges, several informative guest lectures and workshops
+          aimed at the expansion of thoughts into the unexplored realms of the
+          field.
         </p>
         <div style={{ margin: "4rem 0 0 0" }}>
           <C_Btn txt="Register Now" link="/signup"></C_Btn>

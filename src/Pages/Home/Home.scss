@@ -1,9 +1,5 @@
 #home {
-    background: rgba(66, 128, 251, 0.2);
-}
-
-body {
-    background: #71E5FF;
+    background: var(--color-great);
 }
 
 .header {
@@ -22,9 +18,9 @@ body {
 }
 
 .header-content h1 {
-    font-family: var(--font-family);
+    font-family: var(--font-default);
     font-weight: 800;
-    font-size: 8rem;
+    font-size: 4.5rem;
 }
 
 .header-content p {
@@ -207,9 +203,18 @@ body {
 .Prof-content h4 {
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 2rem;
     line-height: 30px;
     color: #71E5FF;
+    margin-bottom: 2rem;
+}
+
+.Prof-content ol li {
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 30px;
 }
 
 .Prof-content h4:last-child {
@@ -219,7 +224,7 @@ body {
 .Prof-content h1 {
     font-family: var(--font-family);
     font-weight: 800;
-    font-size: 34px;
+    font-size: 2rem;
     line-height: 45px;
     margin: 1rem 0;
 }
@@ -228,15 +233,10 @@ body {
     color: var(--color-text);
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.4rem;
     line-height: 30px;
 
-    margin-bottom: 2rem;
 }
-
-
-
-
 
 
 @media screen and (max-width: 950px) {

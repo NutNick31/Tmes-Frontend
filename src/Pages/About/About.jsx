@@ -6,6 +6,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { motion } from "framer-motion";
+import avatar from "../../Assets/avatar.svg";
 const About = () => {
   return (
     <motion.section
@@ -14,13 +15,16 @@ const About = () => {
       animate={{ opacity: 1 }}
       className="about"
     >
+      <h1 className="heading" style={{ color: "var(--color-about-text)" }}>
+        About Us
+      </h1>
       <div className="about_container">
         <section className="info_cards">
           <article>
             <h2>Head Of Department</h2>
             <h3>Prof. Sameer Kumar Pal</h3>
 
-            <img src="https://source.unsplash.com/s3mR42Spras" alt="CTH" />
+            <img src={avatar} alt="CTH" />
             <div className="links">
               <AiFillFacebook className="icons1" />
               <BsInstagram className="icons2" />
@@ -30,7 +34,7 @@ const About = () => {
           <article>
             <h2>President</h2>
             <h3>Prof. Rakesh Kumar</h3>
-            <img src="https://source.unsplash.com/s3mR42Spras" alt="CTH" />
+            <img src={avatar} alt="CTH" />
             <div className="links">
               <AiFillFacebook className="icons1" />
               <BsInstagram className="icons2" />
@@ -44,7 +48,7 @@ const About = () => {
           <article>
             <h2>Vice President</h2>
             <h3>Sachin Jaiswal</h3>
-            <img src="https://source.unsplash.com/s3mR42Spras" alt="CTH" />
+            <img src={avatar} alt="CTH" />
             <div className="links">
               <AiFillFacebook className="icons1" />
               <BsInstagram className="icons2" />
@@ -54,7 +58,7 @@ const About = () => {
           <article>
             <h2>Treasurer</h2>
             <h3>Amit Kumar</h3>
-            <img src="https://source.unsplash.com/s3mR42Spras" alt="CTH" />
+            <img src={avatar} alt="CTH" />
             <div className="links">
               <AiFillFacebook className="icons1" />
               <BsInstagram className="icons2" />
@@ -71,16 +75,12 @@ const About = () => {
             return (
               <article key={index}>
                 <h3>{name}</h3>
-                <img
-                  src="https://assets.website-files.com/60f85e33b5a89c61fcd8377d/61832145912efe370a5d9612_stela-v2-p-500.jpeg"
-                  alt="G-Sec"
-                />
+                <img src={avatar} alt="G-Sec" />
                 <div className="links">
                   <AiFillFacebook className="icons1" />
                   <BsInstagram className="icons2" />
                   <BsTwitter className="icons3" />
                 </div>
-                {/* <img src={img} alt="G-Sec" /> */}
               </article>
             );
           })}
@@ -104,10 +104,7 @@ const About = () => {
                     return (
                       <article key={index_2}>
                         <h4>{name}</h4>
-                        <img
-                          src="https://assets.website-files.com/60f85e33b5a89c61fcd8377d/6119b7615f69af0e04b36579_francois-v5-p-500.jpeg"
-                          alt="CTH"
-                        />
+                        <img src={avatar} alt="CTH" />
                         <div className="links">
                           <AiFillFacebook className="icons1" />
                           <BsInstagram className="icons2" />
@@ -118,6 +115,9 @@ const About = () => {
                     );
                   })}
                 </section>
+                <div class="divider" style={{ margin: " 0 4rem" }}>
+                  <div></div>
+                </div>
               </div>
             );
           })}
