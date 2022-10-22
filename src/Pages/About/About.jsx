@@ -67,6 +67,9 @@ const About = () => {
           </article>
         </section>
       </div>
+      <div class="divider">
+        <div></div>
+      </div>
       <div className="about_container">
         <h2 className="Gsec_h2">General Secretaries</h2>
         <section className="info_cards">
