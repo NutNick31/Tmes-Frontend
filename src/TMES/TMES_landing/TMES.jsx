@@ -7,24 +7,24 @@ import { motion } from "framer-motion";
 import { C_Btn } from "../../Components";
 
 const homeVariants = {
-  hidden : {
+  hidden: {
     opacity: 0,
-    x: "-100vw"
+    x: "-100vw",
   },
-  visible : {
-    opacity : 1,
+  visible: {
+    opacity: 1,
     x: "0vw",
     transition: {
       // delay: 0.4,
       type: "spring",
-      duration: 1
-    }
+      duration: 1,
+    },
   },
   // exit: {
   //   x: "-100vh",
   //   transition: { ease: 'easeInOut' }
   // }
-}
+};
 
 const TMES = () => (
   <>
@@ -33,7 +33,7 @@ const TMES = () => (
       initial="hidden"
       animate="visible"
       exit="exit"
-      id="home"
+      id="tmes"
     >
       <div className="header section__padding">
         <div className="header-content">
