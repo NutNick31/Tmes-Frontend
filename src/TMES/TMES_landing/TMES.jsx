@@ -6,12 +6,33 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { C_Btn } from "../../Components";
 
+const homeVariants = {
+  hidden : {
+    opacity: 0,
+    x: "-100vw"
+  },
+  visible : {
+    opacity : 1,
+    x: "0vw",
+    transition: {
+      // delay: 0.4,
+      type: "spring",
+      duration: 1
+    }
+  },
+  // exit: {
+  //   x: "-100vh",
+  //   transition: { ease: 'easeInOut' }
+  // }
+}
+
 const TMES = () => (
   <>
     <motion.div
-      exit={{ opacity: 0 }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      variants={homeVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
       id="home"
     >
       <div className="header section__padding">
@@ -45,7 +66,7 @@ const TMES = () => (
         </div>
 
         <div className="header-image">
-          <img src="https://source.unsplash.com/pGSgYmTDdvk" />
+          <img src="https://source.unsplash.com/pGSgYmTDdvk" alt="" />
         </div>
       </div>
       <Brand />

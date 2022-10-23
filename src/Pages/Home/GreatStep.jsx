@@ -10,11 +10,27 @@ import SkillsSlider from "./Skill_slider";
 import { C_Btn, Participants } from "../../Components";
 import { motion } from "framer-motion";
 
+const homeVariants = {
+  hidden : {
+    opacity: 0,
+    x: "-100vw"
+  },
+  visible : {
+    opacity : 1,
+    x: "0vw",
+    transition: {
+      type: "spring",
+      duration: 1
+    }
+  },
+}
+
 const Header = () => (
   <motion.div
-    exit={{ opacity: 0 }}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
+    variants={homeVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
     id="home"
   >
     <motiondiv className="header section__padding">

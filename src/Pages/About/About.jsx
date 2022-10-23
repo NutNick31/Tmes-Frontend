@@ -7,12 +7,29 @@ import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { motion } from "framer-motion";
 import avatar from "../../Assets/avatar.svg";
+
+const homeVariants = {
+  hidden : {
+    opacity: 0,
+    x: "-100vw"
+  },
+  visible : {
+    opacity : 1,
+    x: "0vw",
+    transition: {
+      type: "spring",
+      duration: 1
+    }
+  },
+}
+
 const About = () => {
   return (
     <motion.section
-      exit={{ opacity: 0 }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      variants={homeVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
       className="about"
     >
       <h1 className="heading" style={{ color: "var(--color-about-text)" }}>
