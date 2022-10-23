@@ -238,6 +238,21 @@
 
 }
 
+.circle {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #circlesvg {
+        aspect-ratio: 1;
+        border-radius: 50%;
+        height: 10px;
+        background-color: black;
+    }
+}
+
 
 @media screen and (max-width: 950px) {
     .Prof {
