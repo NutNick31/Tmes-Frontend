@@ -4,13 +4,29 @@ import EventName from "./Events_name";
 import { motion } from "framer-motion";
 import "./Events.scss";
 
+const homeVariants = {
+  hidden : {
+    opacity: 0,
+    x: "-100vw"
+  },
+  visible : {
+    opacity : 1,
+    x: "0vw",
+    transition: {
+      type: "spring",
+      duration: 1
+    }
+  },
+}
+
 const Events = () => {
   return (
     <>
       <motion.section
-        exit={{ opacity: 0 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+      variants={homeVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
       >
         <div className="events section__padding">
           <h1 className="heading" style={{ color: "var(--color-events-text)" }}>
