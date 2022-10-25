@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Routes, Route } from "react-router-dom";
-import { GreatStep, Error, Events, About } from "./Pages";
+import { GreatStep, Error, Events, About, Auth } from "./Pages";
 
 import TMES from "./TMES/TMES_landing/TMES";
 
@@ -25,6 +25,9 @@ const Routing = () => {
     <>
       <div className="content">
         <Routes>
+          {/* Auth page*/}
+          <Route path="/auth" element={<Auth />} />
+
           {/* GreatStep Page */}
           <Route exact path="/" element={<TMES />} />
           <Route exact path="/great-step" element={<GreatStep />} />
