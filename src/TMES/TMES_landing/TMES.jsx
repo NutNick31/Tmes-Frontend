@@ -69,7 +69,7 @@ const TMES = () => (
           <img src="https://source.unsplash.com/pGSgYmTDdvk" alt="" />
         </div>
       </div>
-      <Brand />
+      {/* <Brand /> */}
       <Prof />
     </motion.div>
   </>

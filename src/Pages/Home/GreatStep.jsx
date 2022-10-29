@@ -36,11 +36,11 @@ const GreatStep = () => (
   >
     {/* <Circle /> */}
     <Header />
-    <Brand />
+    <Swiper />
+    {/* <Brand /> */}
     <Prof />
     <Prof2 />
     <Participants />
-    <Swiper />
     <SkillsSlider />
   </motion.div>
 );

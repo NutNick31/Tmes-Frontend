@@ -20,6 +20,9 @@ import {
   Mine_Shot,
 } from "./Pages/Events";
 
+import SignIn from "./Pages/Auth/Signin";
+import SignUp from "./Pages/Auth/Signup";
+
 const Routing = () => {
   return (
     <>
@@ -63,6 +66,8 @@ const Routing = () => {
 
           {/* About Page */}
           <Route path="/aboutus" element={<About />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
 
           {/* Error Page */}
           <Route path="*" element={<Error />} />

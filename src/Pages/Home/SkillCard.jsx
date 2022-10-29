@@ -48,6 +48,7 @@ const Image = styled(motion.div)`
   justify-content: center;
   align-items: center;
 `;
+
 const Text = styled(motion.div)`
   display: flex;
   justify-content: center;
