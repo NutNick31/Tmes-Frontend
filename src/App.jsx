@@ -17,11 +17,11 @@ function App() {
 
   return (
     <div className="App">
-      <AnimatedCursor
+      {/* <AnimatedCursor
         color="8, 164, 167"
         innerSize={12}
         style={{ zIndex: "1000" }}
-      />
+      /> */}
       {/* {loading && <Loader />} */}
       {/* {!loading && ( */}
       <>
