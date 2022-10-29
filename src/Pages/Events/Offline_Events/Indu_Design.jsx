@@ -4,7 +4,13 @@ import React from "react";
 Industrial Design Problem:
 Industrial Design Problem is a two-stage offline event, both of which are held at IIT Kharagpur only.
 
-The Industrial Design Problem involves students participating in a team of 4. The two stages of the Industrial Design Problem involves a preliminary round of Written test. Then the selected teams work on the Problem Statement, which is related to the problems faced currently in the Mining and Petroleum Industry. The Industrial Design Problem is an overnight event. The participants are enthusiastic and thrilled with this overnight competition as they would exchange ideas and design a prototype model in one night and bring them to reality.
+The Industrial Design Problem involves students participating in a team of 4. 
+The two stages of the Industrial Design Problem involves a preliminary round 
+of Written test. Then the selected teams work on the Problem Statement, which 
+is related to the problems faced currently in the Mining and Petroleum Industry.
+ The Industrial Design Problem is an overnight event. The participants are 
+ enthusiastic and thrilled with this overnight competition as they would exchange
+  ideas and design a prototype model in one night and bring them to reality.
 */
 
 const Indu_Design = () => {

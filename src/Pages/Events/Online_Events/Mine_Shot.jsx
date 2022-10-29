@@ -14,16 +14,18 @@ Facebook. This event was introduced and hence carried on since GREAT STEP 2014.
 
 const Mine_Shot = () => {
   return (
-    <div className="quiz_container">
-      <h1>Mineshot</h1>
-      <p>Upload your photos</p>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfZcfxU8dlkV1PECCCvhFCEGLZ8BKWuT5Y0SpWxURsvSp_UxQ/viewform?usp=sf_link"
-        target="_blank"
-      >
-        <button class="btn">Upload</button>
-      </a>
-    </div>
+    <div className=""></div>
+
+    // <div className="quiz_container">
+    //   <h1>Mineshot</h1>
+    //   <p>Upload your photos</p>
+    //   <a
+    //     href="https://docs.google.com/forms/d/e/1FAIpQLSfZcfxU8dlkV1PECCCvhFCEGLZ8BKWuT5Y0SpWxURsvSp_UxQ/viewform?usp=sf_link"
+    //     target="_blank"
+    //   >
+    //     <button class="btn">Upload</button>
+    //   </a>
+    // </div>
   );
 };
 

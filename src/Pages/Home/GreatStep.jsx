@@ -34,14 +34,14 @@ const GreatStep = () => (
     exit="exit"
     id="home"
   >
-    <Circle />
-    {/* <Header />
+    {/* <Circle /> */}
+    <Header />
     <Brand />
     <Prof />
     <Prof2 />
     <Participants />
     <Swiper />
-    <SkillsSlider /> */}
+    <SkillsSlider />
   </motion.div>
 );
 
