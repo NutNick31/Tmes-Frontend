@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../Assets/tmes.png";
 import "./Navbar.scss";
 import C_btn from "../../Components/Button/Button";
-
+import EventName from "./Events_name";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -80,34 +80,28 @@ const Navbar = () => {
                 Events
                 <div className="nav_dropdown">
                        <ul>
-                        <div></div>
-                        <li>
-                          Offline events 
+                          {EventName.map((eve) => {
+              const { type, data } = eve;
+              return (
+                <React.Fragment> 
+                <li>{type}
+                <div className="nav_dropdown2">
+                <ul>
+                  {data.map((d) => {
+                    const { name, to } = d;
+                    return (
+                      <li>
+                        <Link to={to}> {name}</Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+                  </div>
+                  </li>
+                  </React.Fragment>
+              );
+            })}
                         
-                          <div className="nav_dropdown2">
-                            <ul>
-                              <li>Geobotics</li>
-                              <li>Safety Hunt</li>
-                              <li>Industrial Design Problem</li>
-                              <li>Safety Data Analytics</li>
-                              <li>Mineac</li>
-                              <li>National Mining Innovation Challenge</li>
-                              <li>Mineo Case Study</li>
-                              <li>Petro Case Study</li>
-                              <li>Enviro Case Study</li>
-                            </ul>
-                          </div>
-                        </li>
-                        
-                        <li>Online events
-                        <div className="nav_dropdown2">
-                        <ul>
-                              <li>Quiz Spell</li>
-                              <li>T-Shirt Design</li>
-                              <li>Mine Shot</li>
-                            </ul>
-                        </div>
-                        </li>
                        </ul>
                   </div>
               </Link>
