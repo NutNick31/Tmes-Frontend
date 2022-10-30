@@ -78,33 +78,32 @@ const Navbar = () => {
             <p>
               <Link className="nav_li" to="/great-step/events">
                 Events
-                <div className="nav_dropdown">
-                       <ul>
-                          {EventName.map((eve) => {
-              const { type, data } = eve;
-              return (
-                <React.Fragment> 
-                  
-                  <li>{type}
-                <div className="nav_dropdown2">
-                <ul>
-                  {data.map((d) => {
-                    const { name, to } = d;
-                    return (
-                         <li>
-                        <Link to={to}> {name}</Link>
-                      </li> 
-                    );
-                  })}
-                </ul>
-                  </div>
-                  </li>
-                  </React.Fragment>
-              );
-            })}
-                        
-                       </ul>
-                  </div>
+                <div className="nav_dropdown scale-up-center">
+                  <ul>
+                    {EventName.map((eve) => {
+                      const { type, data } = eve;
+                      return (
+                        <React.Fragment>
+                          <li>
+                            {type}
+                            <div className="nav_dropdown2 scale-up-center">
+                              <ul>
+                                {data.map((d) => {
+                                  const { name, to } = d;
+                                  return (
+                                    <li>
+                                      <Link to={to}> {name}</Link>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          </li>
+                        </React.Fragment>
+                      );
+                    })}
+                  </ul>
+                </div>
               </Link>
             </p>
             <p>
