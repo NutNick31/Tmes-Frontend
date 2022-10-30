@@ -27,7 +27,7 @@ const Circle = () => {
     <>
       <Sample />
       <div className="circle">
-        <div id="circlesvg"></div>
+        <div id="circlesvg">CIRCLE</div>
       </div>
     </>
   );
