@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./vinod.scss";
 /*  Case Study presents an opportunity to investigate into a current buzz
     in the Gas an Oil Industry. Here is achance to develop your insight in
     petroleum and learn the rudiments of it. It aims to gauge your
@@ -42,7 +42,7 @@ const Petro_CS = () => {
   will be conducted offline in the campus during fest, this involves
   Debate /presentation/question answer rounds.</p>
   <div><h1>Prizes</h1>
-  <table>
+  <table className="styled_table">
     <thead>
       <tr>
         <th>Rank</th>

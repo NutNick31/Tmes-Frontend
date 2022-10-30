@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./vinod.scss";
 const Enviro_CS = () => (
   <div className="off_events section__padding" id="off_events">
     <div className="off_events-image">
@@ -20,12 +20,11 @@ const Enviro_CS = () => (
         It is a two phase event 1st phase will be conducted online , Here in
         online mode the problem statement will be submitted Then 2nd phase will
         be conducted offline in the campus during fest, this involves Debate
-        /presentation/question answer rounds. 1st prize will be of 12000 Rs. 2nd
-        prize will be of 8000 Rs. 3rd prize will be of 500 Rs. The motive of the
+        /presentation/question answer rounds.The motive of the
         event is to rest your knowledge about the techno environmental aspects
       </p>
       <div><h1>Prizes</h1>
-  <table>
+  <table className="styled_table">
     <thead>
       <tr>
         <th>Rank</th>
