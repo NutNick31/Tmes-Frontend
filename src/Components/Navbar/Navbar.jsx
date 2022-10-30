@@ -84,15 +84,16 @@ const Navbar = () => {
               const { type, data } = eve;
               return (
                 <React.Fragment> 
-                <li>{type}
+                  
+                  <li>{type}
                 <div className="nav_dropdown2">
                 <ul>
                   {data.map((d) => {
                     const { name, to } = d;
                     return (
-                      <li>
+                         <li>
                         <Link to={to}> {name}</Link>
-                      </li>
+                      </li> 
                     );
                   })}
                 </ul>
