@@ -14,7 +14,7 @@ Facebook. This event was introduced and hence carried on since GREAT STEP 2014.
 
 const Mine_Shot = () => {
   return (
-    <div className=""></div>
+    <div className="">   </div>
 
     // <div className="quiz_container">
     //   <h1>Mineshot</h1>

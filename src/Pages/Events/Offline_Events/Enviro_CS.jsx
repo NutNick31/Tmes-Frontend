@@ -24,6 +24,34 @@ const Enviro_CS = () => (
         prize will be of 8000 Rs. 3rd prize will be of 500 Rs. The motive of the
         event is to rest your knowledge about the techno environmental aspects
       </p>
+      <div><h1>Prizes</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Ammounts(in rupees)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1st</td>
+        <td>12000</td>
+      </tr>
+      </tbody>
+      <tbody>
+      <tr>
+        <td>2nd</td>
+        <td>8000</td>
+      </tr>
+      </tbody>
+      <tbody>
+      <tr>
+        <td>3rd</td>
+        <td>5000</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
     </div>
   </div>
 );
