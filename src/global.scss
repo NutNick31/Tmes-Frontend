@@ -1,26 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap");
 
 :root {
-  --font-default: 'Inconsolata', monospace;
+  --font-default: 'Josefin Sans', sans-serif;
+  --font-family: 'Alegreya Sans', sans-serif;
+
   --font-sz-p: 1.2rem;
 
+  // --gradient-text: linear-gradient(89.97deg, #a1c1ff 1.84%, rgb(110, 255, 255) 102.67%);
+  // --gradient-tmes: linear-gradient(89.97deg, #fb4242 1.84%, rgb(255, 179, 0) 102.67%);
+
+  --gradient-text: #77e1ac;
+  --gradient-tmes: #ffb765;
+  --gradiant_nav: #ffffff;
+
   --color-pri: #ffffff;
-  --color-sec: #111111;
-  --color-font: rgb(16, 143, 255);
-
-  --font-family: 'Inconsolata', monospace;
-
-  --gradient-text: linear-gradient(89.97deg, #4280fb 1.84%, teal 102.67%);
-  --gradient-bar: linear-gradient(103.22deg, #3C4048 -13.86%, teal 99.55%);
-  --gradient-tmes: linear-gradient(89.97deg, #fb4242 1.84%, rgb(255, 179, 0) 102.67%);
-
-  --color-bg: white;
-  --color-footer: rgb(1, 113, 113);
-  --color-blog: #042c54;
-  --color-text: #81AFDD;
-  --color-subtext: #08a4a7;
+  --color-sec: #000000;
+  --color-bg: #FAF7F0;
+  --color-text: #000000;
+  --color-subtext: rgb(8, 164, 167);
+  --color-footer: #c2fff8;
+  --color-events: #ffedf3;
+  --color-events-text: #F2789F;
+  --color-about: #EFFFFD;
+  --color-about-text: #68e1d3;
+  --color-about-cards: #defffb;
+  --color-tmes: #fff9f1;
+  --color-great: #E1FFEE;
+  --color-error: rgb(255, 255, 240);
 }
 
 * {
@@ -28,6 +42,7 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  // transition: 0.2s ease;
+  color: var(--color-text);
   font-family: var(--font-default);
-  transition: all 0.2s ease;
 }

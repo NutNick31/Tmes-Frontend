@@ -12,6 +12,7 @@
     cursor: pointer;
     border-radius: 5px;
     border: 2px solid var(--color-subtext);
+    transition: all 0.2s ease;
 
     &:hover {
         background: none;

@@ -4,26 +4,32 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 const Swiper_Scroll = () => (
   <div className="Prof section__padding" id="Prof">
     <Swiper
-      slidesPerView={1}
-      spaceBetween={30}
-      loop={true}
-      pagination={{
-        clickable: true,
-      }}
+      effect={"coverflow"}
+      grabCursor={true}
+      centeredSlides={true}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
-      navigation={true}
-      modules={[Pagination, Autoplay, Navigation]}
+      loop={true}
+      slidesPerView={"auto"}
+      coverflowEffect={{
+        rotate: 30,
+        stretch: 10,
+        depth: 1000,
+        modifier: 1.1,
+        slideShadows: false,
+      }}
+      pagination={true}
+      modules={[EffectCoverflow, Autoplay, Pagination]}
       className="mySwiper"
     >
       <SwiperSlide>

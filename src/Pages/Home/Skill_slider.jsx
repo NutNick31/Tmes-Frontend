@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
-import { FaGitAlt, FaReact, FaHtml5, FaCss3, FaNodeJs } from "react-icons/fa";
-import {
-  SiJavascript,
-  SiFirebase,
-  SiStyledcomponents,
-  SiTailwindcss,
-  SiFramer,
-} from "react-icons/si";
 import styled from "styled-components";
 import SkillCard from "./SkillCard";
 

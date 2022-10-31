@@ -14,7 +14,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: white;
+    background-color: var(--color-bg);
 
     .motto {
         display: flex;
@@ -32,10 +32,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 0.5rem;
-        width: 40%;
+        gap: 0.2rem;
+        width: 100%;
         /* background-color: red; */
+        font-family: var(--font-family);
         overflow: hidden;
+        object-fit: contain;
 
         span {
             font-size: 80px;

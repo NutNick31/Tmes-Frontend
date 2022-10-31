@@ -1,6 +1,8 @@
 import React from "react";
 import gpt3Logo from "../../Assets/dummy_logo.jpg";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
+import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => (
   <footer>
@@ -15,22 +17,27 @@ const Footer = () => (
         </div>
         <div className="footer-links_div">
           <h4>Links</h4>
-          <p>Overons</p>
-          <p>Social Media</p>
-          <p>Counters</p>
-          <p>Contact</p>
+          <a
+            href="https://www.facebook.com/profile.php?id=100054504698718"
+            target="blank"
+          >
+            <FaFacebook />
+          </a>
+          <Link to="">Social Media</Link>
+          <Link to="">Counters</Link>
+          <Link to="">Contact</Link>
         </div>
         <div className="footer-links_div">
           <h4>Company</h4>
-          <p>Terms & Conditions </p>
-          <p>Privacy Policy</p>
-          <p>Contact</p>
+          <Link to="">Terms & Conditions </Link>
+          <Link to="">Privacy Policy</Link>
+          <Link to="">Contact</Link>
         </div>
         <div className="footer-links_div">
           <h4>Get in touch</h4>
-          <p>Crechterwoord K12 182 DK Alknjkcb</p>
-          <p>085-132567</p>
-          <p>info@payme.net</p>
+          <Link to="">Crechterwoord K12 182 DK Alknjkcb</Link>
+          <Link to="">085-132567</Link>
+          <Link to="">info@payme.net</Link>
         </div>
       </div>
       <div className="footer-copyright">

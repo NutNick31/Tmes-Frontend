@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../Assets/tmes.png";
 import "./Navbar.scss";
 import C_btn from "../../Components/Button/Button";
-
+import EventName from "./Events_name";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -78,6 +78,32 @@ const Navbar = () => {
             <p>
               <Link className="nav_li" to="/great-step/events">
                 Events
+                <div className="nav_dropdown scale-up-center">
+                  <ul>
+                    {EventName.map((eve) => {
+                      const { type, data } = eve;
+                      return (
+                        <React.Fragment>
+                          <li>
+                            {type}
+                            <div className="nav_dropdown2 scale-up-center">
+                              <ul>
+                                {data.map((d) => {
+                                  const { name, to } = d;
+                                  return (
+                                    <li>
+                                      <Link to={to}> {name}</Link>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          </li>
+                        </React.Fragment>
+                      );
+                    })}
+                  </ul>
+                </div>
               </Link>
             </p>
             <p>

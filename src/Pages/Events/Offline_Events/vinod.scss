@@ -1,0 +1,15 @@
+
+.styled_table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+}
+.styled_table thead tr {
+text-align: left;
+background-color: rgb(195, 170, 200);
+}
+.styled_table td{
+    background-color: rgb(79, 126, 116);
+}

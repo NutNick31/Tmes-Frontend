@@ -1,16 +1,6 @@
 .content {
-    max-width: 1560px;
+    max-width: 1440px;
     margin: 0 auto;
-}
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    background: var(--color-bg);
 }
 
 a {
@@ -44,7 +34,7 @@ a {
 .text__tmes {
     background: var(--gradient-tmes);
     background-clip: text;
-    font-size: 4rem;
+    font-size: 3.2rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -61,6 +51,11 @@ a {
     -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     transform-origin: top left;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.2rem;
 }
 
 @-webkit-keyframes scale-up-center {
