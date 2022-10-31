@@ -2,30 +2,38 @@ import axios from "axios";
 import React from "react";
 import isEmail from "validator/lib/isEmail";
 import { useState } from "react";
-import "./Auth.scss"
+import "./Auth.scss";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import { red } from "@mui/material/colors";
 
 function Signin() {
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [colorEmail, setColorEmail] = useState("form-field");
-    const [colorPassword, setColorPassword] = useState("form-field")
+    const [colorEmail, setColorEmail] = useState(false);
+    const [colorPassword, setColorPassword] = useState(false);
 
     const emailValidator = ()=>{
         console.log(isEmail(email));
         if(!isEmail(email)){
-            setColorEmail("form-field red");
-            console.log("hjhkj");
+            setColorEmail(true);
+            console.log("hjhkj", email);
         }
-        else setColorEmail("form-field green");
+        else setColorEmail(false);
     }
-
 
     const passwordValidator = () => {
         let regx = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
         if(!regx.test(password)){
-            setColorPassword("form-field red");
+            setColorPassword(true);
         }
-        else setColorPassword("form-field green");
+        else setColorPassword(false);
+    }
+
+    const redStyle = {
+        color: "primary.dark",
     }
 
     const handleInputChange = (e) => {
@@ -48,23 +56,27 @@ function Signin() {
             email: email,
             password: password
         }
+        console.log(user)
         axios.post('/auth/login', user)
             .then(res => { console.log(res); })
             .catch(er => console.log(er));
     }
 
     return (
-        <div>
+        <Box>
            <div className="form-group">
-                <input className={colorEmail} name="email" placeholder="email" value={email} onChange={handleInputChange}></input>
-                {colorEmail === "form-field red" ? <div><br></br><p className="red-para">Enter a valid email</p></div>: null}
+                {/* <input className={colorEmail} name="email" placeholder="email" value={email} onInput={handleInputChange}></input> */}
+                <TextField id="standard-basic" autoComplete="off" className={colorEmail} name="email" value={email} onInput={handleInputChange} label="Email" variant="standard" />
+                {colorEmail ? <div><br></br><p className="red-para">Enter a valid email</p></div>: null}
             </div>
             <div className="form-group">
-                <input className={colorPassword} name="password" placeholder="password" value={password} onChange={handleInputChange}></input>
-                {colorPassword === "form-field red" ? <div><br></br><p className="red-para">Invalid Password. Password must contain atleast 6 characters, one numeric, special and uppercase character </p></div>: null}
+                {/* <input className={colorPassword} name="password" placeholder="password" value={password} onInput={handleInputChange}></input> */}
+                <TextField id="standard-basic" autoComplete="off" className={colorPassword} name="password" value={password} onInput={handleInputChange} label="Password" variant="standard" />
+                {colorPassword ? <div><br></br><p className="red-para">Invalid Password. Password must contain atleast 6 characters, one numeric, special and uppercase character </p></div>: null}
             </div>
-            <button onClick={handleSubmit}>Sign in</button>
-        </div>
+            {/* <button onClick={handleSubmit}>Sign in</button> */}
+            <Button variant="contained" onClick={handleSubmit}>Sign in</Button>
+        </Box>
     )
 }
 

@@ -98,8 +98,25 @@
 
 .form-group {
     max-width: 360px;
+    align-items: center;
+    
 
     &:not(:last-child) {
         margin-bottom: 32px;
     }
+
+    .red-para {
+        color: red;
+    }
+    .red {
+        color: red;
+    }
+    .green {
+        color: green;
+    }
+}
+
+.form {
+    margin: auto;
+    display: inline-block;
 }
