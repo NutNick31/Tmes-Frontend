@@ -1,19 +1,42 @@
 import axios from "axios";
 import React from "react";
+import isEmail from "validator/lib/isEmail";
 import { useState } from "react";
 import "./Auth.scss"
 
 function Signin() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [colorEmail, setColorEmail] = useState("form-field");
+    const [colorPassword, setColorPassword] = useState("form-field")
+
+    const emailValidator = ()=>{
+        console.log(isEmail(email));
+        if(!isEmail(email)){
+            setColorEmail("form-field red");
+            console.log("hjhkj");
+        }
+        else setColorEmail("form-field green");
+    }
+
+
+    const passwordValidator = () => {
+        let regx = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+        if(!regx.test(password)){
+            setColorPassword("form-field red");
+        }
+        else setColorPassword("form-field green");
+    }
 
     const handleInputChange = (e) => {
         switch (e.target.name) {
             case "email":
                 setEmail(e.target.value);
+                emailValidator();
                 break;
             case "password":
                 setPassword(e.target.value);
+                passwordValidator();
                 break;
             default:
 
@@ -32,11 +55,13 @@ function Signin() {
 
     return (
         <div>
-            <div className="form-group">
-                <input className="form-field" name="email" placeholder="email" value={email} onChange={handleInputChange}></input>
+           <div className="form-group">
+                <input className={colorEmail} name="email" placeholder="email" value={email} onChange={handleInputChange}></input>
+                {colorEmail === "form-field red" ? <div><br></br><p className="red-para">Enter a valid email</p></div>: null}
             </div>
             <div className="form-group">
-                <input className="form-field" name="password" placeholder="password" value={password} onChange={handleInputChange}></input>
+                <input className={colorPassword} name="password" placeholder="password" value={password} onChange={handleInputChange}></input>
+                {colorPassword === "form-field red" ? <div><br></br><p className="red-para">Invalid Password. Password must contain atleast 6 characters, one numeric, special and uppercase character </p></div>: null}
             </div>
             <button onClick={handleSubmit}>Sign in</button>
         </div>
