@@ -5,49 +5,28 @@ import { useState } from "react";
 import "./Auth.scss";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import { red } from "@mui/material/colors";
+import LockIcon from '@mui/icons-material/Lock';
+import { useNavigate } from 'react-router-dom';
 
 function Signin() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
     const [colorEmail, setColorEmail] = useState(false);
     const [colorPassword, setColorPassword] = useState(false);
 
-    const emailValidator = ()=>{
-        console.log(isEmail(email));
-        if(!isEmail(email)){
-            setColorEmail(true);
-            console.log("hjhkj", email);
-        }
-        else setColorEmail(false);
-    }
-
-    const passwordValidator = () => {
-        let regx = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-        if(!regx.test(password)){
-            setColorPassword(true);
-        }
-        else setColorPassword(false);
-    }
-
-    const redStyle = {
-        color: "primary.dark",
-    }
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         switch (e.target.name) {
             case "email":
                 setEmail(e.target.value);
-                emailValidator();
                 break;
             case "password":
                 setPassword(e.target.value);
-                passwordValidator();
                 break;
             default:
-
         }
     }
 
@@ -63,21 +42,46 @@ function Signin() {
     }
 
     return (
-        <Box>
-           <div className="form-group">
-                {/* <input className={colorEmail} name="email" placeholder="email" value={email} onInput={handleInputChange}></input> */}
-                <TextField id="standard-basic" autoComplete="off" className={colorEmail} name="email" value={email} onInput={handleInputChange} label="Email" variant="standard" />
-                {colorEmail ? <div><br></br><p className="red-para">Enter a valid email</p></div>: null}
+        <div className="auth-div">
+            <div class="header">
+                <LockIcon color="primary" sx={{ fontSize: 50 }} />
+                <p className="header-para">Sign in</p>
             </div>
-            <div className="form-group">
-                {/* <input className={colorPassword} name="password" placeholder="password" value={password} onInput={handleInputChange}></input> */}
-                <TextField id="standard-basic" autoComplete="off" className={colorPassword} name="password" value={password} onInput={handleInputChange} label="Password" variant="standard" />
-                {colorPassword ? <div><br></br><p className="red-para">Invalid Password. Password must contain atleast 6 characters, one numeric, special and uppercase character </p></div>: null}
+            <div className="form">
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        id="standard-basic"
+                        autoComplete="off"
+                        name="email"
+                        value={email}
+                        onInput={handleInputChange}
+                        label="Email"
+                        variant="outlined"
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        id="standard-basic"
+                        type="password"
+                        autoComplete="off"
+                        className={colorPassword}
+                        name="password"
+                        value={password}
+                        onInput={handleInputChange}
+                        label="Password"
+                        variant="outlined"
+                        required
+                    />
+                </div>
+                <Button variant="contained" onClick={handleSubmit}>
+                    Sign in
+                </Button>
+                <p className="lower-para" onClick={()=>{navigate('/signup')}}>New to TMES? Create an account</p>
             </div>
-            {/* <button onClick={handleSubmit}>Sign in</button> */}
-            <Button variant="contained" onClick={handleSubmit}>Sign in</Button>
-        </Box>
-    )
-}
+        </div>
+)}
 
 export default Signin;
