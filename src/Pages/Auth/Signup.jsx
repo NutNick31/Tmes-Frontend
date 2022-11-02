@@ -1,9 +1,19 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import isEmail from "validator/lib/isEmail";
 import "./Auth.scss";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import LockIcon from '@mui/icons-material/Lock';
+
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
 
 function Signup() {
+    // hooks for inputs
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [userName, setUserName] = useState("");
@@ -13,83 +23,256 @@ function Signup() {
     const [altMobile, setAltMobile] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleInputChange = (e) => {
+    // hooks for validation
+    const [colorFirstName, setColorFirstName] = useState(false);
+    const [colorLastName, setColorLastName] = useState(false);
+    const [colorUserName, setColorUserName] = useState(false);
+    const [colorEmail, setColorEmail] = useState(false);
+    const [colorAltEmail, setColorAltEmail] = useState(false);
+    const [colorMobile, setColorMobile] = useState(false);
+    const [colorPassword, setColorPassword] = useState(false);
+
+    const navigate = useNavigate();
+
+    // useEffect(()=>{console.log(colorEmail);}, [colorEmail, colorPassword])
+
+    const emailValidator = () => {
+        console.log(isEmail(email));
+        if (!isEmail(email)) {
+            setColorEmail(true);
+            return false;
+        } else setColorEmail(false);
+        return true;
+    };
+
+    const altEmailValidator = () => {
+        if (!isEmail(altEmail)) {
+            setColorAltEmail(true);
+            return false;
+        } else setColorAltEmail(false);
+        return true;
+    };
+
+    const passwordValidator = () => {
+        console.log(password);
+        let regx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/;
+        if (!regx.test(password)) {
+            setColorPassword(true);
+            return false;
+        } else setColorPassword(false);
+        return true;
+    };
+
+    const handleInputChange = async (e) => {
         switch (e.target.name) {
             case "firstName":
                 setFirstName(e.target.value);
+                setColorFirstName(false);
                 break;
             case "lastName":
                 setLastName(e.target.value);
+                setColorLastName(false);
                 break;
             case "userName":
                 setUserName(e.target.value);
+                setColorUserName(false);
                 break;
             case "email":
                 setEmail(e.target.value);
+                setColorEmail(false);
                 break;
             case "altEmail":
                 setAltEmail(e.target.value);
+                setColorAltEmail(false);
                 break;
             case "mobile":
                 setMobile(e.target.value);
+                setColorMobile(false);
                 break;
             case "altMobile":
                 setAltMobile(e.target.value);
                 break;
             case "password":
                 setPassword(e.target.value);
+                setColorPassword(false);
                 break;
             default:
-
         }
-    }
+    };
 
     const handleSubmit = () => {
-        const user = {
-            firstName: firstName,
-            lastName: lastName,
-            userName: userName,
-            email: email,
-            altEmail: altEmail,
-            mobile: mobile,
-            altMobile: altMobile,
-            password: password
-        }
-        console.log(user);
-        axios.post('/auth/register', user)
-            .then(res => { console.log(res); })
-            .catch(er => console.log(er));
+        
     }
 
+    const handleValidateAndSubmit = () => {
+        // all validations
+        console.log(colorEmail, colorPassword, colorFirstName );
+        let isEmail = emailValidator();
+        let isAltEmail = altEmailValidator();
+        let isPassword = passwordValidator();
+        if (firstName === "") setColorFirstName(true);
+        if (lastName === "") setColorLastName(true);
+        if (userName === "") setColorUserName(true);
+        if (mobile === "") setColorMobile(true);
+
+        if (isEmail && isPassword && firstName !== "" && lastName !== "" && userName !== "" && mobile !== "") {
+            const user = {
+                firstName: firstName,
+                lastName: lastName,
+                userName: userName,
+                email: email,
+                altEmail: altEmail,
+                mobile: mobile,
+                altMobile: altMobile,
+                password: password
+            };
+            console.log(user);
+            axios
+                .post("/auth/register", user)
+                .then((res) => {
+                    console.log(res);
+                })
+                .catch((er) => console.log(er));
+        }
+        else {
+            toast.error("Invalid Entries");
+        }
+    };
+
     return (
-        <div>
-            <div className="form-group">
-                <input className="form-field" name="firstName" placeholder="first name" value={firstName} onChange={handleInputChange}></input>
+        <div className="auth-div">
+            <div class="header">
+                <LockIcon color="primary" sx={{ fontSize: 50 }} />
+                <p className="header-para">Sign up</p>
             </div>
-            <div className="form-group">
-                <input className="form-field" name="lastName" placeholder="last name" value={lastName} onChange={handleInputChange}></input>
+            <div className="form">
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        className="form-field"
+                        name="firstName"
+                        id="filled-basic"
+                        label="First Name"
+                        value={firstName}
+                        onChange={handleInputChange}
+                        variant="outlined"
+                        required
+                        error={colorFirstName ? 1 : 0}
+                        helperText={colorFirstName ? "required" : null}
+                    />
+                </div>
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        className="form-field"
+                        name="lastName"
+                        id="filled-basic"
+                        label="Last Name"
+                        value={lastName}
+                        onChange={handleInputChange}
+                        variant="outlined"
+                        required
+                        error={colorLastName ? 1 : 0}
+                        helperText={colorLastName ? "required" : null}
+                    />
+                </div>
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        className="form-field"
+                        name="userName"
+                        id="filled-basic"
+                        label="Username"
+                        value={userName}
+                        onChange={handleInputChange}
+                        variant="outlined"
+                        required
+                        error={colorUserName ? 1 : 0}
+                        helperText={colorUserName ? "required" : null}
+                    />
+                </div>
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        id="standard-basic"
+                        autoComplete="off"
+                        name="email"
+                        value={email}
+                        onInput={handleInputChange}
+                        label="Email"
+                        variant="outlined"
+                        required
+                        error={colorEmail}
+                        helperText={colorEmail ? "Enter a valid email" : null}
+                    />
+                </div>
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        id="standard-basic"
+                        type="password"
+                        autoComplete="off"
+                        className={colorPassword}
+                        name="password"
+                        value={password}
+                        onInput={handleInputChange}
+                        label="Password"
+                        variant="outlined"
+                        required
+                        error={colorPassword}
+                        helperText={colorPassword ? "Invalid Password. Password must contain atleast 6 characters, one numeric, special and uppercase character" : null}
+                    />
+                </div>
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        autoComplete="off"
+                        name="altEmail"
+                        id="filled-basic"
+                        label="Alternate-Email"
+                        value={altEmail}
+                        onChange={handleInputChange}
+                        variant="outlined"
+                        error={colorAltEmail}
+                        helperText={colorAltEmail ? "Enter a valid email" : null}
+                    />
+                </div>
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        className="form-field"
+                        name="mobile"
+                        id="filled-basic"
+                        label="Mobile No."
+                        value={mobile}
+                        onChange={handleInputChange}
+                        variant="outlined"
+                        required
+                        error={colorMobile ? 1 : 0}
+                        helperText={colorMobile ? "required" : null}
+                    />
+                </div>
+                <div className="form-group">
+                    <TextField
+                        fullWidth
+                        className="form-field"
+                        name="altMobile"
+                        id="filled-basic"
+                        label="Alternate Mobile"
+                        value={altMobile}
+                        onChange={handleInputChange}
+                        variant="outlined"
+                    />
+                </div>
+                <Button variant="contained" onClick={handleValidateAndSubmit}>
+                    Sign up
+                </Button>
+                {/* <button onClick={handleSubmit}>Sign up</button> */}
+                <p className="lower-para" onClick={() => { navigate('/signin') }}>Already registered? Login</p>
             </div>
-            <div className="form-group">
-                <input className="form-field" name="userName" placeholder="user name" value={userName} onChange={handleInputChange}></input>
-            </div>
-            <div className="form-group">
-                <input className="form-field" name="email" placeholder="email" value={email} onChange={handleInputChange}></input>
-            </div>
-            <div className="form-group">
-                <input className="form-field" name="password" placeholder="password" value={password} onChange={handleInputChange}></input>
-            </div>
-            <div className="form-group">
-                <input className="form-field" name="altEmail" placeholder="alt email" value={altEmail} onChange={handleInputChange}></input>
-            </div>
-            <div className="form-group">
-                <input className="form-field" name="mobile" placeholder="mobile" value={mobile} onChange={handleInputChange}></input>
-            </div>
-            <div className="form-group">
-                <input className="form-field" name="altMobile" placeholder="alt mobile" value={altMobile} onChange={handleInputChange}></input>
-            </div>
-            <button onClick={handleSubmit}>Sign up</button>
+            <ToastContainer />
         </div>
-    )
+    );
 }
 
 export default Signup;
