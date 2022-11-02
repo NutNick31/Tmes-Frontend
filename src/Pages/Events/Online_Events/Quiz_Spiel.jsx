@@ -33,7 +33,21 @@ const Quiz_spiel = () => {
   // }, 1000);
 
   return (
-    <div className=""></div>
+
+    <div className="off_events section__padding" id="off_events">
+      <div className="off_events-image">
+        <img src="https://source.unsplash.com/g5tvZdOK0EM" alt="off_events" />
+      </div>
+      <div className="off_events-content">
+        <h1 className="gradient__text">Quiez Spiel</h1>
+        <p>
+          Get ready to go through mind burning questions related to mining and fields.
+        </p>
+        <p>It is a 5 day event, conducted online. One round is conducted each day. It is an individual event. UG/PG can participate with prize money worth 6k.</p>
+      </div>
+    </div>
+
+
 
     // <div className="quiz_container">
     //   <h1>Quiz Spiel</h1>

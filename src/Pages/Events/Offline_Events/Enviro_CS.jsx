@@ -8,7 +8,7 @@ const Enviro_CS = () => (
     <div className="off_events-content">
       <h1 className="gradient__text">ENVIRO CASE STUDY</h1>
       <p>
-        Enviro case study providesyou an opportunity to compete with the
+        Enviro case study provides you an opportunity to compete with the
         brightest minds from various colleges of India and test your
         techno-environmental skills and knowledge in the field of environmental
         science and technology.ENVIRO CASE STUDY Enviro case study providesyou
@@ -23,34 +23,8 @@ const Enviro_CS = () => (
         /presentation/question answer rounds.The motive of the
         event is to rest your knowledge about the techno environmental aspects
       </p>
-      <div><h1>Prizes</h1>
-  <table className="styled_table">
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Ammounts(in rupees)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1st</td>
-        <td>12000</td>
-      </tr>
-      </tbody>
-      <tbody>
-      <tr>
-        <td>2nd</td>
-        <td>8000</td>
-      </tr>
-      </tbody>
-      <tbody>
-      <tr>
-        <td>3rd</td>
-        <td>5000</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
+      <h2>Prizes</h2>
+        <span>First prize : 12k</span><span>Second prize : 8k</span><span>Third prize : 5k</span>
     </div>
   </div>
 );
