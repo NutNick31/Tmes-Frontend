@@ -37,7 +37,7 @@ const GreatStep = () => (
     {/* <Circle /> */}
     <Header />
     <Swiper />
-    {/* <Brand /> */}
+    <Brand />
     <Prof />
     <Prof2 />
     <Participants />

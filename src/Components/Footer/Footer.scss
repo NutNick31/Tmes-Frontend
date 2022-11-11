@@ -70,8 +70,24 @@ footer {
     margin: 1rem;
 }
 
+.footer-links_div2 {
+    flex: 1;
+
+    a {
+        margin: 1rem;
+        font-size: 2rem;
+    }
+}
+
+.footer-links_div {
+    flex: 2;
+
+
+}
+
 .footer-links_logo {
     display: flex;
+    flex: 1;
     flex-direction: column;
 }
 

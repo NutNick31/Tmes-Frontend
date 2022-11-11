@@ -16,7 +16,7 @@ const Header = () => {
         <h1 className="gradient__text">
           <Typewriter
             options={{
-              strings: ["GREAT STEP", "GREATEST DEPARTMENTAL FEST"],
+              strings: ["GREAT STEP", "BIGGEST DEPARTMENTAL FEST"],
               autoStart: true,
               loop: true,
             }}
