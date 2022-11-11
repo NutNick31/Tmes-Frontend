@@ -1,14 +1,16 @@
 .quiz_container{
-    text-align: center;
+    text-align:left;
     margin-top: 20px;
-}
+    margin-left: 20px;
+    
 
+}
 .timer{
     margin:0;
   }
 
 .timer .main{
-color:red;
+color:rgb(235, 13, 13);
 display: inline-block;
 }
 
@@ -23,12 +25,11 @@ display: inline-block;
     font-family: Arial;
     color: #ffffff;
     font-size: 22px;
-    background: #19c2c2;
+    background: #7095c6;
     padding: 10px 20px 10px 20px;
-    text-decoration: none;
   }
   
   .btn:hover {
-    background: #2eb3b3;
+    background: #ba508c;
     text-decoration: none;
   }
