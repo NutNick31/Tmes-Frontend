@@ -9,8 +9,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap");
 
 :root {
-  --font-default: 'Josefin Sans', sans-serif;
-  --font-family: 'Alegreya Sans', sans-serif;
+  // --font-default: 'Josefin Sans', sans-serif;
+  // --font-family: 'Alegreya Sans', sans-serif;
 
   --font-sz-p: 1.2rem;
 
@@ -26,7 +26,7 @@
   --color-bg: #FAF7F0;
   --color-text: #000000;
   --color-subtext: rgb(8, 164, 167);
-  --color-footer: #c2fff8;
+  --color-footer: #0E2E50;
   --color-events: #ffedf3;
   --color-events-text: #F2789F;
   --color-about: #EFFFFD;
@@ -43,6 +43,6 @@
   margin: 0;
   scroll-behavior: smooth;
   // transition: 0.2s ease;
-  color: var(--color-text);
-  font-family: var(--font-default);
+  // color: var(--color-text);
+  // font-family: var(--font-default);
 }

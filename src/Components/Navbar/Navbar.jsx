@@ -9,9 +9,9 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav>
-      <div className="navbar">
-        <div className="navbar-menu">
+    <nav class="nav_">
+      <div className="navbar_">
+        <div className="navbar_-menu">
           {toggleMenu ? (
             <RiCloseLine
               color="black"
@@ -26,8 +26,8 @@ const Navbar = () => {
             />
           )}
           {toggleMenu && (
-            <div className="navbar-menu_container scale-up-center">
-              <div className="navbar-menu_container-links">
+            <div className="navbar_-menu_container scale-up-center">
+              <div className="navbar_-menu_container-links">
                 <p>
                   <Link className="nav_li" to="/">
                     Home
@@ -49,7 +49,7 @@ const Navbar = () => {
                   </Link>
                 </p>
               </div>
-              <div className="navbar-menu_container-links-sign">
+              <div className="navbar_-menu_container-links-sign">
                 <p>
                   <Link to="/signin"> Sign In</Link>
                 </p>
@@ -60,11 +60,11 @@ const Navbar = () => {
             </div>
           )}
         </div>
-        <div className="navbar-links">
-          <div className="navbar-links_logo">
+        <div className="navbar_-links">
+          <div className="navbar_-links_logo">
             <img src={logo} />
           </div>
-          <div className="navbar-links_container">
+          <div className="navbar_-links_container">
             <p>
               <Link className="nav_li" to="/">
                 Home
@@ -78,7 +78,7 @@ const Navbar = () => {
             <p>
               <Link className="nav_li" to="/great-step/events">
                 Events
-                <div className="nav_dropdown scale-up-center">
+                <div className="nav_dropdown_ scale-up-center">
                   <ul>
                     {EventName.map((eve) => {
                       const { type, data } = eve;
@@ -86,7 +86,7 @@ const Navbar = () => {
                         <React.Fragment>
                           <li>
                             {type}
-                            <div className="nav_dropdown2 scale-up-center">
+                            <div className="nav_dropdown_2 scale-up-center">
                               <ul>
                                 {data.map((d) => {
                                   const { name, to } = d;
@@ -113,7 +113,7 @@ const Navbar = () => {
             </p>
           </div>
         </div>
-        <div className="navbar-sign">
+        <div className="navbar_-sign">
           <p>
             <Link to="/signin"> Sign In</Link>
           </p>

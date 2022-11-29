@@ -4,6 +4,7 @@ import Routing from "./Routing";
 import "./Pages/Events/Offline_Events/Offline_Events.scss";
 import { AnimatePresence } from "framer-motion";
 import AnimatedCursor from "react-animated-cursor";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.scss";
 
@@ -16,7 +17,7 @@ function App() {
   }, [loading]);
 
   return (
-    <div className="App">
+    <div className="App container-fluid p-0">
       {/* <AnimatedCursor
         color="8, 164, 167"
         innerSize={12}
