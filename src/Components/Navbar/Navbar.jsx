@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav class="nav_">
+    <nav className="nav_">
       <div className="navbar_">
         <div className="navbar_-menu">
           {toggleMenu ? (
@@ -76,8 +76,8 @@ const Navbar = () => {
               </Link>
             </p>
             <p>
-              <Link className="nav_li" to="/great-step/events">
-                Events
+              <div className="nav_li">
+                <Link to="/great-step/events">Events</Link>
                 <div className="nav_dropdown_ scale-up-center">
                   <ul>
                     {EventName.map((eve) => {
@@ -91,7 +91,7 @@ const Navbar = () => {
                                 {data.map((d) => {
                                   const { name, to } = d;
                                   return (
-                                    <li>
+                                    <li key={name}>
                                       <Link to={to}> {name}</Link>
                                     </li>
                                   );
@@ -104,7 +104,7 @@ const Navbar = () => {
                     })}
                   </ul>
                 </div>
-              </Link>
+              </div>
             </p>
             <p>
               <Link className="nav_li" to="/aboutus">

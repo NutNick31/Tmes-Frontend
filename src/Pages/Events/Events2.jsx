@@ -156,7 +156,7 @@ const Events2 = () => {
                   {data.map((d) => {
                     const { name, to } = d;
                     return (
-                      <li>
+                      <li key={name}>
                         <Link to={to} className="nav__link" data-link>
                           <span>{name}</span>
                         </Link>
@@ -178,7 +178,7 @@ const Events2 = () => {
               {data.map((d) => {
                 const { name, to } = d;
                 return (
-                  <section>
+                  <section key={name}>
                     {/* <section id="section_1" style={{ "--i:": 0 }}> */}
                     <div className="events_container">
                       <h2 className="section__heading">
