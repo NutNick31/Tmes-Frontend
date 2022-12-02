@@ -1,12 +1,13 @@
 import React from "react";
 import "./TMES.scss";
+import tmes_home2 from "../../Assets/tmes_home2.jpg";
 
-const Prof = () => (
-  <div className="Prof section__padding" id="Prof">
-    <div className="Prof-image">
-      <img src="https://source.unsplash.com/g5tvZdOK0EM" alt="Prof" />
+const tmes_info_ = () => (
+  <div className="tmes_info_ section__padding" id="tmes_info_">
+    <div className="tmes_info_-image">
+      <img src={tmes_home2} alt="tmes_info_" />
     </div>
-    <div className="Prof-content">
+    <div className="tmes_info_-content">
       <h4>Some of the noted events are:</h4>
 
       <ol>
@@ -20,4 +21,4 @@ const Prof = () => (
   </div>
 );
 
-export default Prof;
+export default tmes_info_;

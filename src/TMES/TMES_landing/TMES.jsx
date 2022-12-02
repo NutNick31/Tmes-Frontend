@@ -5,6 +5,7 @@ import Prof from "./Prof";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { C_Btn } from "../../Components";
+import tmes_home from "../../Assets/tmes_home.jpg";
 
 const homeVariants = {
   hidden: {
@@ -66,7 +67,11 @@ const TMES = () => (
         </div>
 
         <div className="header-image">
-          <img src="https://source.unsplash.com/pGSgYmTDdvk" alt="" />
+          <img
+            src={tmes_home}
+            style={{ borderRadius: "1rem", height: "400px" }}
+            alt=""
+          />
         </div>
       </div>
       {/* <Brand /> */}

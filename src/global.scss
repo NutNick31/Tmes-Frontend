@@ -1,13 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;700;800;900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap");
-
 :root {
   // --font-default: 'Josefin Sans', sans-serif;
   // --font-family: 'Alegreya Sans', sans-serif;
@@ -37,6 +27,27 @@
   --color-error: rgb(255, 255, 240);
 }
 
+.theme1 {
+  --gradient-text: #77e1ac;
+  --gradient-tmes: #6D67E4;
+  --gradiant_nav: #0a1521;
+
+  --color-pri: #000000;
+  --color-sec: #fff;
+  --color-bg: #000;
+  --color-text: #EFF5F5;
+  --color-subtext: #aa92ff;
+  --color-footer: #0E2E50;
+  --color-events: #ffedf3;
+  --color-events-text: #F2789F;
+  --color-about: #10002b;
+  --color-about-text: #f0e1ff;
+  --color-about-cards: #240046;
+  --color-tmes: #0d1b2a;
+  --color-great: #0d1b2a;
+  --color-error: rgb(255, 255, 240);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -45,4 +56,9 @@
   // transition: 0.2s ease;
   // color: var(--color-text);
   // font-family: var(--font-default);
+}
+
+#root,
+html {
+  background: var(--color-bg);
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Footer/Footer";
+import "../Footer/Footer.scss";
 import C_Btn from "../Button/Button";
 
 const Participants = () => {

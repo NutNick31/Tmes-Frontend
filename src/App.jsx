@@ -22,17 +22,17 @@ function App() {
         color="8, 164, 167"
         innerSize={12}
         style={{ zIndex: "1000" }}
-      /> */}
-      {/* {loading && <Loader />} */}
-      {/* {!loading && ( */}
-      <>
-        <AnimatePresence>
-          <Navbar />
-          <Routing />
-          <Footer />
-        </AnimatePresence>
-      </>
-      {/* )} */}
+      />
+      {loading && <Loader />}
+      {!loading && (
+        <> */}
+      <AnimatePresence>
+        <Navbar />
+        <Routing />
+        <Footer />
+      </AnimatePresence>
+      {/* </>
+      )} */}
     </div>
   );
 }

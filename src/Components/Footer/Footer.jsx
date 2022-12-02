@@ -1,12 +1,16 @@
 import React from "react";
-import gpt3Logo from "../../Assets/dummy_logo.jpg";
 import "./Footer.scss";
 import { Link } from "react-router-dom";
-import { FaFacebookSquare, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { BottomNavigation } from "@mui/material";
+
+const social_media = {
+  fb: "https://www.facebook.com/greatstep/",
+  li: "https://in.linkedin.com/company/great-step-iit-kharagpur",
+  insta: "https://instagram.com/tmes_iitkgp?igshid=YmMyMTA2M2Y=",
+  metakgp: "https://wiki.metakgp.org/w/Great_Step",
+};
 
 const Footer = () => (
-  <div className="container-fluid text-white-50 footer pt-5 mt-5 wow fadeIn">
+  <div className="container-fluid text-white-50 footer pt-5 wow fadeIn">
     <div className="container py-5 text-white-50">
       <div className="row g-5">
         <div className="col-lg-3 col-md-6">
@@ -37,18 +41,30 @@ const Footer = () => (
             <i className="fa fa-envelope me-3"></i>help@tmesiitkgp.in
           </p>
           <div className="d-flex pt-2">
-            <Link className="btn btn-outline-light btn-social" to="">
-              <i className="fab fa-twitter"></i>
-            </Link>
-            <Link className="btn btn-outline-light btn-social" to="">
+            <a
+              className="btn btn-outline-light btn-social"
+              target="blank"
+              href={social_media.fb}
+            >
               <i className="fab fa-facebook-f"></i>
-            </Link>
-            <Link className="btn btn-outline-light btn-social" to="">
-              <i className="fab fa-youtube"></i>
-            </Link>
-            <Link className="btn btn-outline-light btn-social" to="">
+            </a>
+            <a
+              className="btn btn-outline-light btn-social"
+              target="blank"
+              href={social_media.li}
+            >
               <i className="fab fa-linkedin-in"></i>
-            </Link>
+            </a>
+            <a
+              className="btn btn-outline-light btn-social"
+              target="blank"
+              href={social_media.insta}
+            >
+              <i class="bi bi-instagram"></i>
+            </a>
+            {/* <a href={social_media.metakgp} target="blank">
+              <SiWikipedia className="btn btn-outline-light btn-social" />
+            </a> */}
           </div>
         </div>
         <div className="col-lg-4 col-md-6">
