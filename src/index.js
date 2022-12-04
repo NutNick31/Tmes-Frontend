@@ -4,6 +4,8 @@ import "./global.scss";
 import "./style.scss";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
+// axios config for entire app(Do not touch)
+import './utils/axiosUtil';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

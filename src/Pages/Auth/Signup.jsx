@@ -11,6 +11,10 @@ import LockIcon from '@mui/icons-material/Lock';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
+import { Paper, Stack, Typography } from "@mui/material";
+import { gapi } from "gapi-script";
+
+const clientId = "624129812015-r37r08ea6qj737c9ftnsm8h32gkiiuns.apps.googleusercontent.com"
 
 function Signup() {
     // hooks for inputs
@@ -34,7 +38,16 @@ function Signup() {
 
     const navigate = useNavigate();
 
-    // useEffect(()=>{console.log(colorEmail);}, [colorEmail, colorPassword])
+    useEffect(() => {
+        function start() {
+            gapi.client.init({
+                clientId: clientId,
+                scope: ""
+            })
+        }
+
+        gapi.load('client:auth2', start);
+    });
 
     const emailValidator = () => {
         console.log(isEmail(email));
@@ -100,13 +113,10 @@ function Signup() {
         }
     };
 
-    const handleSubmit = () => {
-        
-    }
 
     const handleValidateAndSubmit = () => {
         // all validations
-        console.log(colorEmail, colorPassword, colorFirstName );
+        console.log(colorEmail, colorPassword, colorFirstName);
         let isEmail = emailValidator();
         let isAltEmail = altEmailValidator();
         let isPassword = passwordValidator();
@@ -130,7 +140,7 @@ function Signup() {
             axios
                 .post("/auth/register", user)
                 .then((res) => {
-                    console.log(res);
+                    console.log(res.data);
                 })
                 .catch((er) => console.log(er));
         }
@@ -139,139 +149,144 @@ function Signup() {
         }
     };
 
+    if (localStorage.getItem('curUser')) {
+        navigate('/profile');
+    }
+
+
     return (
-        <div className="auth-div">
-            <div class="header">
-                <LockIcon color="primary" sx={{ fontSize: 50 }} />
-                <p className="header-para">Sign up</p>
+        <>
+            <div className="center">
+                <Paper
+                    sx={{ width: 450, p: 2 , backgroundColor: '#fff', m: 2}}
+                >
+                    <Stack
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={2}
+                    >
+                        <LockIcon color="primary" sx={{ fontSize: 50 }} />
+                        <Typography variant="h5">Sign up </Typography>
+                        <TextField
+                            fullWidth
+                            className="form-field"
+                            name="firstName"
+                            id="filled-basic"
+                            label="First Name"
+                            value={firstName}
+                            onChange={handleInputChange}
+                            variant="outlined"
+                            required
+                            error={colorFirstName ? 1 : 0}
+                            helperText={colorFirstName ? "required" : null}
+                        />
+
+                        <TextField
+                            fullWidth
+                            className="form-field"
+                            name="lastName"
+                            id="filled-basic"
+                            label="Last Name"
+                            value={lastName}
+                            onChange={handleInputChange}
+                            variant="outlined"
+                            required
+                            error={colorLastName ? 1 : 0}
+                            helperText={colorLastName ? "required" : null}
+                        />
+
+                        <TextField
+                            fullWidth
+                            className="form-field"
+                            name="userName"
+                            id="filled-basic"
+                            label="Username"
+                            value={userName}
+                            onChange={handleInputChange}
+                            variant="outlined"
+                            required
+                            error={colorUserName ? 1 : 0}
+                            helperText={colorUserName ? "required" : null}
+                        />
+
+                        <TextField
+                            fullWidth
+                            id="standard-basic"
+                            autoComplete="off"
+                            name="email"
+                            value={email}
+                            onInput={handleInputChange}
+                            label="Email"
+                            variant="outlined"
+                            required
+                            error={colorEmail}
+                            helperText={colorEmail ? "Enter a valid email" : null}
+                        />
+
+                        <TextField
+                            fullWidth
+                            id="standard-basic"
+                            type="password"
+                            autoComplete="off"
+                            className={colorPassword}
+                            name="password"
+                            value={password}
+                            onInput={handleInputChange}
+                            label="Password"
+                            variant="outlined"
+                            required
+                            error={colorPassword}
+                            helperText={colorPassword ? "Invalid Password. Password must contain atleast 6 characters, one numeric, special and uppercase character" : null}
+                        />
+
+                        <TextField
+                            fullWidth
+                            autoComplete="off"
+                            name="altEmail"
+                            id="filled-basic"
+                            label="Alternate-Email"
+                            value={altEmail}
+                            onChange={handleInputChange}
+                            variant="outlined"
+                            error={colorAltEmail}
+                            helperText={colorAltEmail ? "Enter a valid email" : null}
+                        />
+
+                        <TextField
+                            fullWidth
+                            className="form-field"
+                            name="mobile"
+                            id="filled-basic"
+                            label="Mobile No."
+                            value={mobile}
+                            onChange={handleInputChange}
+                            variant="outlined"
+                            required
+                            error={colorMobile ? 1 : 0}
+                            helperText={colorMobile ? "required" : null}
+                        />
+
+                        <TextField
+                            fullWidth
+                            className="form-field"
+                            name="altMobile"
+                            id="filled-basic"
+                            label="Alternate Mobile"
+                            value={altMobile}
+                            onChange={handleInputChange}
+                            variant="outlined"
+                        />
+                    </Stack>
+                    <Button sx={{ my: 2 }} variant="contained" onClick={handleValidateAndSubmit}>
+                        Sign up
+                    </Button>
+                    <p className="lower-para" onClick={() => { navigate('/signin') }}>Already registered? Login</p>
+
+                </Paper>
+                <ToastContainer />
             </div>
-            <div className="form">
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        className="form-field"
-                        name="firstName"
-                        id="filled-basic"
-                        label="First Name"
-                        value={firstName}
-                        onChange={handleInputChange}
-                        variant="outlined"
-                        required
-                        error={colorFirstName ? 1 : 0}
-                        helperText={colorFirstName ? "required" : null}
-                    />
-                </div>
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        className="form-field"
-                        name="lastName"
-                        id="filled-basic"
-                        label="Last Name"
-                        value={lastName}
-                        onChange={handleInputChange}
-                        variant="outlined"
-                        required
-                        error={colorLastName ? 1 : 0}
-                        helperText={colorLastName ? "required" : null}
-                    />
-                </div>
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        className="form-field"
-                        name="userName"
-                        id="filled-basic"
-                        label="Username"
-                        value={userName}
-                        onChange={handleInputChange}
-                        variant="outlined"
-                        required
-                        error={colorUserName ? 1 : 0}
-                        helperText={colorUserName ? "required" : null}
-                    />
-                </div>
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        id="standard-basic"
-                        autoComplete="off"
-                        name="email"
-                        value={email}
-                        onInput={handleInputChange}
-                        label="Email"
-                        variant="outlined"
-                        required
-                        error={colorEmail}
-                        helperText={colorEmail ? "Enter a valid email" : null}
-                    />
-                </div>
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        id="standard-basic"
-                        type="password"
-                        autoComplete="off"
-                        className={colorPassword}
-                        name="password"
-                        value={password}
-                        onInput={handleInputChange}
-                        label="Password"
-                        variant="outlined"
-                        required
-                        error={colorPassword}
-                        helperText={colorPassword ? "Invalid Password. Password must contain atleast 6 characters, one numeric, special and uppercase character" : null}
-                    />
-                </div>
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        autoComplete="off"
-                        name="altEmail"
-                        id="filled-basic"
-                        label="Alternate-Email"
-                        value={altEmail}
-                        onChange={handleInputChange}
-                        variant="outlined"
-                        error={colorAltEmail}
-                        helperText={colorAltEmail ? "Enter a valid email" : null}
-                    />
-                </div>
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        className="form-field"
-                        name="mobile"
-                        id="filled-basic"
-                        label="Mobile No."
-                        value={mobile}
-                        onChange={handleInputChange}
-                        variant="outlined"
-                        required
-                        error={colorMobile ? 1 : 0}
-                        helperText={colorMobile ? "required" : null}
-                    />
-                </div>
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        className="form-field"
-                        name="altMobile"
-                        id="filled-basic"
-                        label="Alternate Mobile"
-                        value={altMobile}
-                        onChange={handleInputChange}
-                        variant="outlined"
-                    />
-                </div>
-                <Button variant="contained" onClick={handleValidateAndSubmit}>
-                    Sign up
-                </Button>
-                {/* <button onClick={handleSubmit}>Sign up</button> */}
-                <p className="lower-para" onClick={() => { navigate('/signin') }}>Already registered? Login</p>
-            </div>
-            <ToastContainer />
-        </div>
+        </>
     );
 }
 

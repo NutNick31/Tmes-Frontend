@@ -7,6 +7,10 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import LockIcon from '@mui/icons-material/Lock';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import Login from "./login";
+import { Paper, Stack, Typography } from "@mui/material";
 
 function Signin() {
 
@@ -37,51 +41,85 @@ function Signin() {
         }
         console.log(user)
         axios.post('/auth/login', user)
-            .then(res => { console.log(res); })
+            .then(res => {
+                console.log(res.data);
+                if (res.data.success) {
+                    let dataToBeStored = {
+                        firstName: res.data.user.firstName,
+                        lastName: res.data.user.lastName,
+                        userName: res.data.user.userName,
+                        email: res.data.user.email,
+                        altEmail: res.data.user.altEmail,
+                        mobile: res.data.user.mobile,
+                        altMobile: res.data.user.altMobile
+                    }
+                    localStorage.setItem("curUser", JSON.stringify(dataToBeStored))
+                    navigate('/profile');
+                }
+                else {
+                    toast.error(res.data.message);
+                }
+            })
             .catch(er => console.log(er));
     }
 
+    if (localStorage.getItem('curUser')) {
+        navigate('/profile');
+    }
+
+
     return (
-        <div className="auth-div">
-            <div class="header">
-                <LockIcon color="primary" sx={{ fontSize: 50 }} />
-                <p className="header-para">Sign in</p>
+        <>
+            <div className="center">
+                <Paper
+                    sx={{ width: 450, p: 2 , backgroundColor: '#fff', m:2}}
+                >
+                    <Stack
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={2}
+                    >
+                        <LockIcon sx={{ fontSize: 50, color: '#4285F4' }} />
+                        <Typography variant="h5">Sign in </Typography>
+                        <Login />
+                        <TextField
+                            fullWidth
+                            id="standard-basic"
+                            autoComplete="off"
+                            name="email"
+                            value={email}
+                            onInput={handleInputChange}
+                            label="Email"
+                            variant="outlined"
+                            sx={{ my: 2 }}
+                            required
+                        />
+                        <TextField
+                            fullWidth
+                            id="standard-basic"
+                            type="password"
+                            autoComplete="off"
+                            className={colorPassword}
+                            name="password"
+                            value={password}
+                            onInput={handleInputChange}
+                            label="Password"
+                            variant="outlined"
+                            sx={{ my: 2 }}
+                            required
+                        />
+                    </Stack>
+                    <Button sx={{ my: 2 }} variant="contained" onClick={handleSubmit}>
+                        Sign in
+                    </Button>
+                    <p className="lower-para" onClick={() => { navigate('/signup') }}>New to TMES? Create an account</p>
+                </Paper>
+                <ToastContainer />
             </div>
-            <div className="form">
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        id="standard-basic"
-                        autoComplete="off"
-                        name="email"
-                        value={email}
-                        onInput={handleInputChange}
-                        label="Email"
-                        variant="outlined"
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <TextField
-                        fullWidth
-                        id="standard-basic"
-                        type="password"
-                        autoComplete="off"
-                        className={colorPassword}
-                        name="password"
-                        value={password}
-                        onInput={handleInputChange}
-                        label="Password"
-                        variant="outlined"
-                        required
-                    />
-                </div>
-                <Button variant="contained" onClick={handleSubmit}>
-                    Sign in
-                </Button>
-                <p className="lower-para" onClick={()=>{navigate('/signup')}}>New to TMES? Create an account</p>
-            </div>
-        </div>
-)}
+
+        </>
+    )
+}
 
 export default Signin;
