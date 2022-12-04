@@ -22,6 +22,7 @@ import {
 
 import SignIn from "./Pages/Auth/Signin";
 import SignUp from "./Pages/Auth/Signup";
+import ProfilePage from "./Pages/Auth/Profile/profile";
 
 const Routing = () => {
   return (
@@ -64,8 +65,11 @@ const Routing = () => {
 
           {/* About Page */}
           <Route path="/aboutus" element={<About />} />
+
+          {/* Authentication */}
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/profile" element={<ProfilePage />} />
 
           {/* Error Page */}
           <Route path="*" element={<Error />} />
