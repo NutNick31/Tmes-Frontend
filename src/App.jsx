@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Footer, Loader } from "./Components";
-import Navbar from './Components/Navbar/Navbar1'
+import Navbar from "./Components/Navbar/Navbar1";
 import Routing from "./Routing";
 import "./Pages/Events/Offline_Events/Offline_Events.scss";
 import { AnimatePresence } from "framer-motion";

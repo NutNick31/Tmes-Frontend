@@ -12,6 +12,21 @@
 
 }
 
+nav {
+    background: var(--gradiant_nav);
+}
+
+.nav-link:hover {
+    * {
+        color: var(--color-text);
+    }
+}
+
+.navbar {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .navbar_ {
     max-width: 1560px;
     margin: 0 auto;
