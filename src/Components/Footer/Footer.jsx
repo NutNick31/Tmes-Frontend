@@ -38,7 +38,7 @@ const Footer = () => (
             <i className="fa fa-phone-alt me-3"></i>+91 1234567890
           </p>
           <p className="mb-2">
-            <i className="fa fa-envelope me-3"></i>help@tmesiitkgp.in
+            <i className="fa fa-envelope me-3" ></i><a href='mailto:help@tmesiitkgp.in'>help@tmesiitkgp.in</a>
           </p>
           <div className="d-flex pt-2">
             <a

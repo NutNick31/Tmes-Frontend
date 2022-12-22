@@ -70,9 +70,16 @@ function Signin() {
 
     return (
         <>
-            <div className="center">
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                height: '100%',
+            }}>
                 <Paper
-                    sx={{ width: 450, p: 2 , backgroundColor: '#fff', m:2}}
+                    sx={{ minWidth: 350, p: 3, backgroundColor: '#fff', m: 2 }}
                 >
                     <Stack
                         direction="column"
@@ -115,9 +122,9 @@ function Signin() {
                     </Button>
                     <p className="lower-para" onClick={() => { navigate('/signup') }}>New to TMES? Create an account</p>
                 </Paper>
-                <ToastContainer />
             </div>
 
+            <ToastContainer />
         </>
     )
 }
