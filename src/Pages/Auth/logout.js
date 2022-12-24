@@ -12,9 +12,13 @@ function Logout() {
         localStorage.clear();
         navigate('/signin')
     }
+    const onFail = (e) => {
+        console.log(e)
+        localStorage.clear();
+    }
 
     return (
-        <div id="signInButton">
+        <div id="signInButton" onClick={onSuccess}>
             <GoogleLogout
                 clientId={clientId}
                 render={renderProps => (
@@ -24,6 +28,7 @@ function Logout() {
                 )}
                 buttonText="Logout"
                 onLogoutSuccess={onSuccess}
+                onFailure={onFail}
             ></GoogleLogout>
         </div>
     )

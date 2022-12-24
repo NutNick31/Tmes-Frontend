@@ -11,7 +11,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
-import { Paper, Stack, Typography } from "@mui/material";
+import { Paper, Stack, Typography, InputAdornment } from "@mui/material";
 import { gapi } from "gapi-script";
 
 const clientId = "624129812015-r37r08ea6qj737c9ftnsm8h32gkiiuns.apps.googleusercontent.com"
@@ -68,13 +68,22 @@ function Signup() {
 
     const passwordValidator = () => {
         console.log(password);
-        let regx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/;
+        let regx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{6,}$/;
         if (!regx.test(password)) {
             setColorPassword(true);
             return false;
         } else setColorPassword(false);
         return true;
     };
+
+    const mobileValidator = () => {
+        let regx = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+        if(!regx.test(mobile)){
+            setColorMobile(true);
+            return false;
+        } else setColorMobile(false);
+        return true;
+    }
 
     const handleInputChange = async (e) => {
         switch (e.target.name) {
@@ -120,6 +129,7 @@ function Signup() {
         let isEmail = emailValidator();
         let isAltEmail = altEmailValidator();
         let isPassword = passwordValidator();
+        let isMobile = mobileValidator();
         if (firstName === "") setColorFirstName(true);
         if (lastName === "") setColorLastName(true);
         if (userName === "") setColorUserName(true);
@@ -156,9 +166,17 @@ function Signup() {
 
     return (
         <>
-            <div className="center">
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                // Change the size to fit the parent element of this div
+                width: '100%',
+                height: '100%',
+            }}>
                 <Paper
-                    sx={{ width: 450, p: 2 , backgroundColor: '#fff', m: 2}}
+                    sx={{ width: 350, p: 2, backgroundColor: '#fff', m: 2 }}
                 >
                     <Stack
                         direction="column"
@@ -263,8 +281,19 @@ function Signup() {
                             onChange={handleInputChange}
                             variant="outlined"
                             required
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <Typography>+91</Typography>
+                                    </InputAdornment>
+                                ),
+                            }}
+                            startAdornment={
+                                <InputAdornment position="start">
+                                </InputAdornment>
+                            }
                             error={colorMobile ? 1 : 0}
-                            helperText={colorMobile ? "required" : null}
+                            helperText={colorMobile ? "Enter a valid 10 digit mobile number" : null}
                         />
 
                         <TextField
@@ -274,6 +303,13 @@ function Signup() {
                             id="filled-basic"
                             label="Alternate Mobile"
                             value={altMobile}
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <Typography>+91</Typography>
+                                    </InputAdornment>
+                                ),
+                            }}
                             onChange={handleInputChange}
                             variant="outlined"
                         />
