@@ -104,6 +104,12 @@ const Navbar = () => {
                 <i className="far fa-address-book"></i>Profile
               </NavLink>
             </li>
+
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/admin" exact>
+                <i className="far fa-address-book"></i>Admin
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
