@@ -43,7 +43,7 @@ export default function Carousel2() {
         coverflowEffect={{
           rotate: 10,
           depth: 90,
-          modifier: 8,
+          modifier: 5,
         }}
         navigation
         modules={[EffectCoverflow, Navigation, Autoplay]}

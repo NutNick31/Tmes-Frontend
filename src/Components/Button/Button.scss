@@ -14,8 +14,11 @@
     border: 2px solid var(--color-subtext);
     transition: all 0.2s ease;
 
+    Link:hover {
+        color: var(--color-subtext);
+    }
+
     &:hover {
         background: none;
-        color: var(--color-subtext);
     }
 }

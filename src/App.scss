@@ -24,14 +24,21 @@ a {
     background: radial-gradient(circle at 3% 25%, #EAEAEA 0%, #3C4048 25%);
 }
 
+@font-face {
+    font-family: BauhausRegular;
+    src: url(./Assets/Fonts/BauhausRegular.ttf);
+}
+
 .gradient__text {
     background: var(--gradient-text);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: BauhausRegular;
 }
 
 .text__tmes {
+    font-family: BauhausRegular;
     background: var(--gradient-tmes);
     background-clip: text;
     font-size: 3.2rem;

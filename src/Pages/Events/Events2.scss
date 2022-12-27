@@ -7,15 +7,14 @@
 }
 
 .events2 {
-    --activeColor: rgb(240 240 240);
-    --navBgColor: rgb(37 38 41);
-    --navTextColor: rgb(144 144 150);
-    --mainBg: rgb(20 20 23);
+    --activeColor: rgb(41, 0, 223);
+    --navBgColor: rgb(255, 255, 255, 0);
+    --navTextColor: rgb(0, 0, 0);
     font-family: 'Syncopate', sans-serif;
     min-height: 70vh;
     margin: 0;
     color: var(--color-text);
-    background: var(--mainBg);
+    background: var(--color-events);
     position: relative;
 
     img {

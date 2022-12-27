@@ -6,6 +6,8 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { C_Btn } from "../../Components";
 import tmes_home from "../../Assets/tmes_home.jpg";
+import Posters from "../../Components/Posters/Posters";
+import list from "./posterlist";
 
 const homeVariants = {
   hidden: {
@@ -76,6 +78,7 @@ const TMES = () => (
       </div>
       {/* <Brand /> */}
       <Prof />
+      <Posters list={list} />
     </motion.div>
   </>
 );

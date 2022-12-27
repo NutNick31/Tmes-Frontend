@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Marquee from "react-fast-marquee";
 import styled from "styled-components";
 import SkillCard from "./SkillCard";

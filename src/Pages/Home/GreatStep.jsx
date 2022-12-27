@@ -1,15 +1,10 @@
 import React from "react";
 import "./Home.scss";
 import { motion } from "framer-motion";
-import Brand from "./Brand";
-
 import Prof from "./Prof";
 import Swiper from "./Swiper_Scroll";
-import Prof2 from "./Prof2";
 import SkillsSlider from "./Skill_slider";
-import Circle from "./CircleNew";
 import Header from "./Header";
-import Participants from "../../Components/Participants/Participants";
 
 const homeVariants = {
   hidden: {

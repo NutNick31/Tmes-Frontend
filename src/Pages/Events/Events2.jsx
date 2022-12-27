@@ -70,11 +70,11 @@ const Events2 = () => {
 
         /* Set animation start state */
         gsap.set(heading, {
-          opacity: 0,
+          opacity: 0.8,
           y: 50,
         });
         gsap.set(image, {
-          opacity: 0,
+          opacity: 0.8,
           rotateY: 15,
         });
 
@@ -176,7 +176,7 @@ const Events2 = () => {
           return (
             <>
               {data.map((d) => {
-                const { name, to } = d;
+                const { name, to, img } = d;
                 return (
                   <section key={name}>
                     {/* <section id="section_1" style={{ "--i:": 0 }}> */}
@@ -187,7 +187,7 @@ const Events2 = () => {
                         </Link>
                       </h2>
                       <div className="section__image">
-                        <img src="https://drive.google.com/uc?id=1u5X90QgOnMncgNkr1MDuJBeZNoIgvIty" />
+                        <img src={img} />
                       </div>
                     </div>
                   </section>

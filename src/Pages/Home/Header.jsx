@@ -14,13 +14,14 @@ const Header = () => {
           Presents
         </p>
         <h1 className="gradient__text">
-          <Typewriter
+          {/* <Typewriter
             options={{
               strings: ["GREAT STEP", "BIGGEST DEPARTMENTAL FEST"],
               autoStart: true,
               loop: true,
             }}
-          />
+          /> */}
+          Great Step 2022-23
         </h1>
         <p>
           Upholding the esteem of being the antecedent, the Department of Mining
