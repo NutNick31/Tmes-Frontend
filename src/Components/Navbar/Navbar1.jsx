@@ -104,11 +104,11 @@ const Navbar = () => {
               </NavLink>
             </li>
 
-            {/* <li className="nav-item">
+             <li className="nav-item">
               <NavLink className="nav-link" to="/admin" exact>
                 <i className="far fa-address-book"></i>Admin
               </NavLink>
-            </li> */}
+            </li> 
           </ul>
         </div>
       </div>

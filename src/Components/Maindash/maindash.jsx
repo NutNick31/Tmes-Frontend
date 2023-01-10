@@ -5,8 +5,8 @@ import './maindash.css'
 const Maindash = () => {
   return (
     <div className='maindash'>
-     <h2>Table</h2>
-    <Table/>
+      <h2>Admin Panel</h2>
+      <Table />
     </div>
   )
 }

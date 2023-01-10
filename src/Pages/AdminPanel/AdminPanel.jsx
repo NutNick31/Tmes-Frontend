@@ -7,9 +7,9 @@ import Sidebar from '../../Components/sidebar/sidebar'
 const AdminPanel=()=> {
   return (
     <div className="AdminPanel">
-        <div className="AppGlass">
+        <div className="AppGlass"> 
           
-           <Sidebar/>
+   
            <Maindash/> 
         </div>
     </div>

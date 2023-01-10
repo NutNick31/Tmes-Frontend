@@ -17,6 +17,10 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LastPageIcon from '@mui/icons-material/LastPage';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditSharpIcon from '@mui/icons-material/EditSharp';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
+// Code for Pagination
 function TablePaginationActions(props) {
     const theme = useTheme();
     const { count, page, rowsPerPage, onPageChange } = props;
@@ -77,35 +81,39 @@ TablePaginationActions.propTypes = {
     page: PropTypes.number.isRequired,
     rowsPerPage: PropTypes.number.isRequired,
 };
-
-function createData(name, calories, fat) {
-    return { name, calories, fat };
-}
-
-const rows = [
-    createData('Cupcake', 305, 3.7),
-    createData('Donut', 452, 25.0),
-    createData('Eclair', 262, 16.0),
-    createData('Frozen yoghurt', 159, 6.0),
-    createData('Gingerbread', 356, 16.0),
-    createData('Honeycomb', 408, 3.2),
-    createData('Ice cream sandwich', 237, 9.0),
-    createData('Jelly Bean', 375, 0.0),
-    createData('KitKat', 518, 26.0),
-    createData('Lollipop', 392, 0.2),
-    createData('Marshmallow', 318, 0),
-    createData('Nougat', 360, 19.0),
-    createData('Oreo', 437, 18.0),
-
-].sort((a, b) => (a.calories < b.calories ? -1 : 1));
-
 export default function CustomPaginationActionsTable() {
     const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(5);
+    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+    const [users, setUsers]=useState([])
 
+    useEffect(() => {
+      axios.get("/auth/admin/getList", {
+        headers: {
+            Authorization: JSON.parse(localStorage.getItem('curUser')).token
+        }
+      })
+      .then((res)=>{
+        console.log(res.data.users);
+        let allUsers = [];
+        let response = res.data.users;
+
+        response.map(user=> {
+            allUsers.push({
+                firstName: user.firstName,
+                lastName: user.lastName,
+                userName: user.userName,
+                email: user.email,
+                mobile: user.mobile,
+                altEmail: user.altEmail ? user.altEmail : '-',
+                altMobile: user.altMobile? user.altMobile : '-'
+            })
+        })
+        setUsers(allUsers)
+      })
+    }, [])
     // Avoid a layout jump when reaching the last page with empty rows.
     const emptyRows =
-        page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+        page > 0 ? Math.max(0, (1 + page) * rowsPerPage - users.length) : 0;
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -122,31 +130,55 @@ export default function CustomPaginationActionsTable() {
                 <TableBody>
                     <TableRow>
                         <TableCell component="th" scope="row">
-                            1
+                            FirstName
                         </TableCell>
                         <TableCell style={{ width: 160 }} align="right">
-                            2
+                            LastName
                         </TableCell>
                         <TableCell style={{ width: 160 }} align="right">
-                            3
+                            Username
                         </TableCell>
                         <TableCell style={{ width: 160 }} align="right">
-                            4
+                            Email
+                        </TableCell>
+                        <TableCell style={{ width: 160 }} align="right">
+                            Phone No
+                        </TableCell>
+                        <TableCell style={{ width: 160 }} align="right">
+                            Alt Email
+                        </TableCell>
+                        <TableCell style={{ width: 160 }} align="right">
+                           Alt Phone No
+                        </TableCell>
+                        <TableCell style={{ width: 160 }} align="right">
+                           Actions
                         </TableCell>
                     </TableRow>
                     {(rowsPerPage > 0
-                        ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                        : rows
+                        ? users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                        : users
                     ).map((row) => (
                         <TableRow key={row.name}>
                             <TableCell component="th" scope="row">
-                                {row.name}
+                                {row.firstName}
                             </TableCell>
                             <TableCell style={{ width: 160 }} align="right">
-                                {row.calories}
+                                {row.lastName}
                             </TableCell>
                             <TableCell style={{ width: 160 }} align="right">
-                                {row.fat}
+                                {row.userName}
+                            </TableCell>
+                            <TableCell style={{ width: 160 }} align="right">
+                                {row.email}
+                            </TableCell>
+                            <TableCell style={{ width: 160 }} align="right">
+                                {row.mobile}
+                            </TableCell>
+                            <TableCell style={{ width: 160 }} align="right">
+                                {row.altEmail}
+                            </TableCell>
+                            <TableCell style={{ width: 160 }} align="right">
+                                {row.altMobile}
                             </TableCell>
                             <TableCell style={{ width: 160 }} align="right">
                                 <DeleteIcon />
@@ -164,9 +196,9 @@ export default function CustomPaginationActionsTable() {
                 <TableFooter>
                     <TableRow>
                         <TablePagination
-                            rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
+                            rowsPerPageOptions={[10, 25, { label: 'All', value: -1 }]}
                             colSpan={3}
-                            count={rows.length}
+                            count={users.length}
                             rowsPerPage={rowsPerPage}
                             page={page}
                             SelectProps={{
