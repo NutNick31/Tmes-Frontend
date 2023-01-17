@@ -8,6 +8,7 @@ import { C_Btn } from "../../Components";
 import tmes_home from "../../Assets/tmes_home.jpg";
 import Posters from "../../Components/Posters/Posters";
 import list from "./posterlist";
+import Swiper_Scroll from "../../Pages/Home/Swiper_Scroll";
 
 const homeVariants = {
   hidden: {
@@ -77,8 +78,8 @@ const TMES = () => (
         </div>
       </div>
       {/* <Brand /> */}
+      <Swiper_Scroll imgs={list} />
       <Prof />
-      <Posters list={list} />
     </motion.div>
   </>
 );

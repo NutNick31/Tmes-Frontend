@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./global.scss";
-import "./style.scss";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 // axios config for entire app(Do not touch)
-import './utils/axiosUtil';
+import "./utils/axiosUtil";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,20 +14,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-/*
-TMES
-
-Event --- online events { ... apply for events }
-      --- offline event { ... }
-
-Our Team --- Hireachy 
-         --- Gsec
-         --- heads
-
-search --- event search
-
-Log In / Sign Up
-
-Admin pannel
-*/

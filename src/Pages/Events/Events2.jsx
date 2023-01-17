@@ -5,6 +5,8 @@ import Draggable from "gsap/Draggable";
 import "./Events2.scss";
 import EventName from "./Events_name";
 import { Link } from "react-router-dom";
+import tmes_home from "../../Assets/tmes_home.jpg";
+import Button from "../../Components/Button/Button";
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
 
@@ -70,12 +72,12 @@ const Events2 = () => {
 
         /* Set animation start state */
         gsap.set(heading, {
-          opacity: 0.8,
+          opacity: 0,
           y: 50,
         });
         gsap.set(image, {
-          opacity: 0.8,
-          rotateY: 15,
+          opacity: 0,
+          // rotateY: 15,
         });
 
         /* Create the timeline */
@@ -156,7 +158,7 @@ const Events2 = () => {
                   {data.map((d) => {
                     const { name, to } = d;
                     return (
-                      <li key={name}>
+                      <li>
                         <Link to={to} className="nav__link" data-link>
                           <span>{name}</span>
                         </Link>
@@ -176,18 +178,27 @@ const Events2 = () => {
           return (
             <>
               {data.map((d) => {
-                const { name, to, img } = d;
+                const { name, to, info } = d;
                 return (
-                  <section key={name}>
+                  <section>
                     {/* <section id="section_1" style={{ "--i:": 0 }}> */}
                     <div className="events_container">
-                      <h2 className="section__heading">
-                        <Link to={to}>
-                          <span>{name}</span>
-                        </Link>
-                      </h2>
+                      <div>
+                        <h2 className="section__heading">
+                          <Link to={to}>
+                            <span>{name}</span>
+                          </Link>
+                        </h2>
+                        <h6>{info}</h6>
+                        <Button
+                          className="c_btn"
+                          color="red"
+                          txt="View More..."
+                          link={to}
+                        />
+                      </div>
                       <div className="section__image">
-                        <img src={img} />
+                        <img src={tmes_home} />
                       </div>
                     </div>
                   </section>

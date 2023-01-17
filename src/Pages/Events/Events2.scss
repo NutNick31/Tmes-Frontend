@@ -7,14 +7,15 @@
 }
 
 .events2 {
-    --activeColor: rgb(41, 0, 223);
-    --navBgColor: rgb(255, 255, 255, 0);
-    --navTextColor: rgb(0, 0, 0);
+    --activeColor: rgb(240 240 240);
+    --navBgColor: rgb(37 38 41);
+    --navTextColor: rgb(144 144 150);
+    --mainBg: rgb(20 20 23);
     font-family: 'Syncopate', sans-serif;
     min-height: 70vh;
     margin: 0;
     color: var(--color-text);
-    background: var(--color-events);
+    background: var(--mainBg);
     position: relative;
 
     img {
@@ -37,13 +38,34 @@
     .events_container {
         width: 100%;
         max-width: 80rem;
-        padding: 0 max(5vw, 1rem);
+        padding: 2rem;
         transform-style: perspective-3d;
         perspective: 900px;
+        background-color: #15273a;
+        border: .1rem solid blue;
+
+        .c_btn {
+            color: red;
+        }
+
+        transition: 0.2s;
+
+        &:hover {
+
+            border: .1rem solid var(--color-events);
+        }
+
+
+        border-radius: 20px;
+        justify-content: space-between;
+
+        h6 {
+            margin-top: 1rem;
+        }
 
         @media (min-width: 32em) {
-            display: grid;
-            grid-template-columns: repeat(7, minmax(0, 1fr));
+            display: flex;
+            // grid-template-columns: repeat(7, minmax(0, 1fr));
             gap: 1rem;
         }
     }
@@ -162,7 +184,7 @@
         margin: 0 0 1rem;
         grid-row: 1;
         grid-column: 1 / span 7;
-        align-self: end;
+        align-self: start;
         position: relative;
         z-index: 1;
 
@@ -180,11 +202,16 @@
     }
 
     .section__image {
-        grid-row: 1;
-        grid-column: 5 / span 3;
+        // grid-row: 1;
+        // grid-column: 5 / span 3;
         position: relative;
-        box-shadow: 0.45rem 0.45rem 8rem rgb(0 0 0 / 0.3);
-        align-self: center;
+        // box-shadow: 0.45rem 0.45rem 8rem rgb(0 0 0 / 0.3);
+        align-self: end;
+        max-width: 500px;
+
+        &:hover {
+            transform: scale(1.2);
+        }
 
         img {
             border-radius: 0.4rem;

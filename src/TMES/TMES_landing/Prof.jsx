@@ -12,7 +12,9 @@ const tmes_info_ = () => (
 
       <ul>
         <li>Freshers introduction</li>
-        <li>GREAT STEP</li>
+        <li>
+          <a href="https://tmesiitkgp.in/">GREAT STEP</a>
+        </li>
         <li>Teacher Day Celebration</li>
         <li>Annual Departmental Picnic</li>
         <li>Mine visits</li>
