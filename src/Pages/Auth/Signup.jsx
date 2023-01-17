@@ -78,7 +78,7 @@ function Signup() {
 
     const mobileValidator = () => {
         let regx = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
-        if(!regx.test(mobile)){
+        if (!regx.test(mobile)) {
             setColorMobile(true);
             return false;
         } else setColorMobile(false);
@@ -151,6 +151,11 @@ function Signup() {
                 .post("/auth/register", user)
                 .then((res) => {
                     console.log(res.data);
+                    if (res.data.success)
+                        navigate('/signin')
+                    else{
+                        toast.error(res.data.message)
+                    }
                 })
                 .catch((er) => console.log(er));
         }
