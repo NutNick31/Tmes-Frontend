@@ -10,9 +10,12 @@
     border: none;
     outline: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0;
     border: 2px solid var(--color-subtext);
     transition: all 0.2s ease;
+    box-shadow: 5px 5px ;
+    &:hover {
+        background: none;
 
     Link:hover {
         color: var(--color-subtext);
@@ -20,5 +23,6 @@
 
     &:hover {
         background: none;
+    }
     }
 }
