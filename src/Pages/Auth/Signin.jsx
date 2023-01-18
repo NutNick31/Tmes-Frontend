@@ -51,7 +51,8 @@ function Signin() {
                         email: res.data.user.email,
                         altEmail: res.data.user.altEmail,
                         mobile: res.data.user.mobile,
-                        altMobile: res.data.user.altMobile
+                        altMobile: res.data.user.altMobile,
+                        token: res.data.token
                     }
                     localStorage.setItem("curUser", JSON.stringify(dataToBeStored))
                     navigate('/profile');

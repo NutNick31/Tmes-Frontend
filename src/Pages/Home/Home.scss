@@ -11,6 +11,10 @@
     color: red;
 }
 
+// @font-face {
+//     font-family: Georgia;
+//     src: url(./Assets/Fonts/BauhausRegular.ttf);
+// }
 .header-content {
     flex: 1;
     display: flex;
@@ -19,18 +23,21 @@
 }
 
 .header-content h1 {
-    font-family: var(--font-default);
     font-weight: 800;
     font-size: 4.5rem;
 }
 
 .header-content p {
-    font-family: var(--font-default);
+    font-family: Georgia;
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
     color: var(--color-text);
     margin-top: 1.5rem;
+
+    a {
+        text-decoration: underline;
+    }
 }
 
 .header-content__input {

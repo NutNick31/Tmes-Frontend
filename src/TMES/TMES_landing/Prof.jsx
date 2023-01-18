@@ -10,13 +10,16 @@ const tmes_info_ = () => (
     <div className="tmes_info_-content">
       <h4>Some of the noted events are:</h4>
 
-      <ol>
+      <ul>
         <li>Freshers introduction</li>
-        <li>GREAT STEP</li>
+        <li>
+          <a href="https://tmesiitkgp.in/">GREAT STEP</a>
+        </li>
+        <li>Teacher Day Celebration</li>
         <li>Annual Departmental Picnic</li>
-        <li>Intra Department Sports meet</li>
+        <li>Mine visits</li>
         <li>Final Year Farewell</li>
-      </ol>
+      </ul>
     </div>
   </div>
 );

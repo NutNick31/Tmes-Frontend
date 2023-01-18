@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import "./Navbar.css";
-import "./Navbar.scss";
+import "./Navbar1.scss";
 import { NavLink } from "react-router-dom";
 import $ from "jquery";
 import logo from "../../Assets/tmes.png";
@@ -47,9 +46,9 @@ const Navbar = () => {
   return (
     <nav>
       <div className="navbar navbar-expand-lg">
-        <NavLink className="navbar-brand navbar-logo" to="/" exact>
+        {/* <NavLink className="navbar-brand navbar-logo" to="/" exact>
           <img src={logo} />
-        </NavLink>
+        </NavLink> */}
 
         <button
           className="navbar-toggler"
@@ -101,15 +100,15 @@ const Navbar = () => {
 
             <li className="nav-item">
               <NavLink className="nav-link" to="/profile" exact>
-                <i className="far fa-address-book"></i>Profile
+                <i className="far fa-address-book"></i>Sign In
               </NavLink>
             </li>
 
-            <li className="nav-item">
+             <li className="nav-item">
               <NavLink className="nav-link" to="/admin" exact>
                 <i className="far fa-address-book"></i>Admin
               </NavLink>
-            </li>
+            </li> 
           </ul>
         </div>
       </div>

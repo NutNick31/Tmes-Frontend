@@ -76,16 +76,18 @@
     font-weight: 500;
     font-size: 2rem;
     line-height: 30px;
-    color: #71E5FF;
+    color: var(--gradient-tmes);
     margin-bottom: 2rem;
+    text-decoration: underline;
 }
 
-.tmes_info_-content ol li {
+.tmes_info_-content ul li {
     color: var(--color-text);
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 30px;
+    font-weight: bold;
 }
 
 .tmes_info_-content h4:last-child {

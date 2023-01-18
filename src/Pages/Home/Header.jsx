@@ -1,6 +1,5 @@
 import React from "react";
 import { C_Btn, Participants } from "../../Components";
-import Typewriter from "typewriter-effect";
 
 const Header = () => {
   return (
@@ -14,13 +13,14 @@ const Header = () => {
           Presents
         </p>
         <h1 className="gradient__text">
-          <Typewriter
+          {/* <Typewriter
             options={{
               strings: ["GREAT STEP", "BIGGEST DEPARTMENTAL FEST"],
               autoStart: true,
               loop: true,
             }}
-          />
+          /> */}
+          Great Step 2022-23
         </h1>
         <p>
           Upholding the esteem of being the antecedent, the Department of Mining
@@ -31,13 +31,16 @@ const Header = () => {
         <p>
           With this vision as guidance and zeal to keep pace with the
           developments in the Mining and Geology industries, the Department of
-          Mining engineering initiated GREATSTEP (acronym for Geo-Resource
-          Engineering and Technology Students' Teachers' and Employers'
-          Partnership) in 2008 to create a common platform for all the budding
-          Mining engineers. The last seven editions were filled with mind
-          churning challenges, several informative guest lectures and workshops
-          aimed at the expansion of thoughts into the unexplored realms of the
-          field.
+          Mining engineering initiated{" "}
+          <b>
+            <a href="https://tmesiitkgp.in/great-step">GREATSTEP</a>
+          </b>{" "}
+          (acronym for Geo-Resource Engineering and Technology Students'
+          Teachers' and Employers' Partnership) in 2008 to create a common
+          platform for all the budding Mining engineers. The last seven editions
+          were filled with mind churning challenges, several informative guest
+          lectures and workshops aimed at the expansion of thoughts into the
+          unexplored realms of the field.
         </p>
         <div style={{ margin: "4rem 0 0 0" }}>
           <C_Btn txt="Register Now" link="/signup"></C_Btn>

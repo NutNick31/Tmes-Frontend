@@ -2,7 +2,12 @@ const data = [
   {
     type: "Offline Events",
     data: [
-      { to: "/great-step/events/Enviro_CS", name: "Enviro Case Study" },
+      {
+        to: "/great-step/events/Enviro_CS",
+        name: "Enviro Case Study",
+        img: "https://drive.google.com/uc?id=1u5X90QgOnMncgNkr1MDuJBeZNoIgvIty",
+        info: "Enviro case study provides you an opportunity to compete with the brightest minds from various colleges of India and test your techno-environmental skills and knowledge in the field of environmental science and technology",
+      },
       { to: "/great-step/events/Mine_CS", name: "Mineo Case Study" },
       { to: "/great-step/events/Petro_CS", name: "Petro Case Study" },
       { to: "/great-step/events/Indu_Design", name: "Industrial Design" },

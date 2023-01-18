@@ -1,5 +1,5 @@
 :root {
-  // --font-default: 'Josefin Sans', sans-serif;
+  --font-default: Georgia;
   // --font-family: 'Alegreya Sans', sans-serif;
 
   --font-sz-p: 1.2rem;
@@ -38,7 +38,7 @@
   --color-text: #EFF5F5;
   --color-subtext: #aa92ff;
   --color-footer: #0E2E50;
-  --color-events: #ffedf3;
+  --color-events: #404040;
   --color-events-text: #F2789F;
   --color-about: #10002b;
   --color-about-text: #f0e1ff;
@@ -56,6 +56,7 @@
   // transition: 0.2s ease;
   // color: var(--color-text);
   // font-family: var(--font-default);
+  font-family: var(--font-default);
 }
 
 #root,

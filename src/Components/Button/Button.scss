@@ -13,9 +13,18 @@
     border-radius: 0;
     border: 2px solid var(--color-subtext);
     transition: all 0.2s ease;
+<<<<<<< HEAD
     box-shadow: 5px 5px ;y
     &:hover {
         background: none;
+=======
+
+    Link:hover {
+>>>>>>> f84babfc3bd34f7a5efe267dd2838b2f4e2f9ce8
         color: var(--color-subtext);
+    }
+
+    &:hover {
+        background: none;
     }
 }
