@@ -5,7 +5,7 @@ import SkillCard from "./SkillCard";
 
 function SkillsSlider() {
   return (
-    <section className="section__padding " style={{ padding: "0" }}>
+    <section className="section__padding " style={{ padding: "1rem 0" }}>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <h1 className="gradient__text" style={{ fontSize: "4rem" }}>
           Our Sponsers

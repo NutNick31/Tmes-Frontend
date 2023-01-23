@@ -44,42 +44,29 @@
                     flex-direction: row;
                     justify-content: center;
 
-                    .icons1 {
+                    .icon {
+                        &:hover {
+                            transform: scale(1.2);
+                            cursor: pointer;
+                        }
+
                         width: 25px;
                         height: 25px;
                         margin-right: 15px;
                         margin-top: 15px;
                         margin-bottom: -10px;
-
-                        &:hover {
-                            color: #4267B2;
-                        }
                     }
 
-                    .icons2 {
-                        width: 25px;
-                        height: 25px;
-                        margin-right: 15px;
-                        margin-top: 15px;
-                        margin-bottom: -10px;
-
-                        &:hover {
-                            color: #E1306C;
-                        }
-
+                    .icons1:hover {
+                        color: #4267B2;
                     }
 
-                    .icons3 {
-                        width: 25px;
-                        height: 25px;
-                        margin-right: 15px;
-                        margin-top: 15px;
-                        margin-bottom: -10px;
+                    .icons2:hover {
+                        color: #E1306C;
+                    }
 
-                        &:hover {
-                            color: #1DA1F2;
-                        }
-
+                    .icons3:hover {
+                        color: #1DA1F2;
                     }
                 }
 
@@ -103,9 +90,6 @@
                 }
             }
 
-            article:hover {
-                transform: scale(1.05) rotate(-2deg) translate(-2px);
-            }
         }
 
         .head_name {

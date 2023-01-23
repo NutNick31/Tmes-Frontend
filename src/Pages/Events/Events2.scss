@@ -4,6 +4,10 @@
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
+
+    .events_info {
+        margin: 2rem 0;
+    }
 }
 
 .events2 {
@@ -26,7 +30,6 @@
     }
 
     section {
-        --h: calc(var(--i) * 30);
         min-height: 60vh;
         padding: 8rem 0 max(5vh, 2rem);
         display: flex;
@@ -42,7 +45,7 @@
         transform-style: perspective-3d;
         perspective: 900px;
         background-color: #15273a;
-        border: .1rem solid blue;
+        border: .1rem solid rgb(15, 15, 78);
 
         .c_btn {
             color: red;
@@ -61,6 +64,7 @@
 
         h6 {
             margin-top: 1rem;
+
         }
 
         @media (min-width: 32em) {

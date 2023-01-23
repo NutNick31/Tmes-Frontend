@@ -62,8 +62,8 @@ const TMES = () => (
         </div>
       </div>
       {/* <Brand /> */}
-      <Swiper_Scroll imgs={list} />
       <Prof />
+      <Swiper_Scroll imgs={list} />
     </motion.div>
   </>
 );

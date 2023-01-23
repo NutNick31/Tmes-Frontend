@@ -4,7 +4,6 @@ import Navbar from "./Components/Navbar/Navbar1";
 import Routing from "./Routing";
 import "./Pages/Events/Offline_Events/Offline_Events.scss";
 import { AnimatePresence } from "framer-motion";
-import AnimatedCursor from "react-animated-cursor";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.scss";
