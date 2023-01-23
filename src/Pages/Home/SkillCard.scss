@@ -11,17 +11,12 @@
         font-size: max(2vw, 2rem);
         margin-bottom: 1rem;
         color: white;
-
-        h1 {
-            font-family: 'Josefin Sans', sans-serif;
-        }
     }
 
     .mySwiper {
-        margin: 2rem;
 
         .swiper-slide {
-            height: 400px;
+            height: 300px;
             width: auto;
 
             img {
@@ -36,11 +31,12 @@
 }
 
 .skillcard_container {
-    height: 20vh;
+    height: 120px;
     display: flex;
     margin: 0 0.6rem;
     overflow: hidden;
     border-radius: 0.4rem;
+
 
     @media screen and (max-width: 640px) {
         width: 70vw;

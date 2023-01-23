@@ -1,5 +1,7 @@
+@import "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
+
 :root {
-  --font-default: Georgia;
+  --font-default: 'Open Sans', sans-serif;
   // --font-family: 'Alegreya Sans', sans-serif;
 
   --font-sz-p: 1.2rem;
@@ -40,9 +42,9 @@
   --color-footer: #0E2E50;
   --color-events: #404040;
   --color-events-text: #F2789F;
-  --color-about: #10002b;
+  --color-about: #00092b;
   --color-about-text: #f0e1ff;
-  --color-about-cards: #240046;
+  --color-about-cards: #100041;
   --color-tmes: #0d1b2a;
   --color-great: #0d1b2a;
   --color-error: rgb(255, 255, 240);
@@ -55,7 +57,7 @@
   scroll-behavior: smooth;
   // transition: 0.2s ease;
   // color: var(--color-text);
-  // font-family: var(--font-default);
+  font-family: 'Open Sans', sans-serif;
   font-family: var(--font-default);
 }
 

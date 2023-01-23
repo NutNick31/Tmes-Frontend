@@ -1,7 +1,13 @@
+import anuj from "../../Assets/Profile/gsec/anuj.jpg";
+import amit from "../../Assets/Profile/gsec/amit.jpg";
+import niharika from "../../Assets/Profile/gsec/niharika.jpg";
+import ninad from "../../Assets/Profile/gsec/ninad.jpg";
+import shivam from "../../Assets/Profile/gsec/shivam.jpg";
+
 const GSec = [
   {
     name: "Anuj Verma",
-    img: "",
+    imgg: anuj,
     twe: "",
     insta: "https://www.instagram.com/oxone_999/",
     fb: "https://www.facebook.com/profile.php?id=100039765825690",
@@ -9,7 +15,7 @@ const GSec = [
   },
   {
     name: "Ninad Sahu",
-    img: "",
+    imgg: ninad,
     twe: "",
     insta: "https://www.instagram.com/ninadsahu/",
     fb: "https://www.facebook.com/ninad.sahu.3",
@@ -17,7 +23,7 @@ const GSec = [
   },
   {
     name: "Shivam Kumar Shaw",
-    img: "",
+    imgg: shivam,
     twe: "",
     insta: "https://www.instagram.com/shivam.kumar_098",
     fb: "https://www.facebook.com/shivamkumar.shaw.92",
@@ -25,7 +31,7 @@ const GSec = [
   },
   {
     name: "Niharika Sahu",
-    img: "",
+    imgg: niharika,
     twe: "",
     insta:
       "https://www.instagram.com/invites/contact/?i=iu83kscak9cc&utm_content=6km96mg",

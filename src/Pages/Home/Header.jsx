@@ -12,16 +12,7 @@ const Header = () => {
         <p style={{ fontSize: "1.6rem" }} className="gradient__text">
           Presents
         </p>
-        <h1 className="gradient__text">
-          {/* <Typewriter
-            options={{
-              strings: ["GREAT STEP", "BIGGEST DEPARTMENTAL FEST"],
-              autoStart: true,
-              loop: true,
-            }}
-          /> */}
-          Great Step 2022-23
-        </h1>
+        <h1 className="gradient__text">Great Step 2022-23</h1>
         <p>
           Upholding the esteem of being the antecedent, the Department of Mining
           Engineering, IIT Kharagpur has always believed in the flow of

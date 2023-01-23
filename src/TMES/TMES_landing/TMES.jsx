@@ -40,22 +40,7 @@ const TMES = () => (
     >
       <div className="header section__padding">
         <div className="header-content">
-          {/* <div className="header-image">
-          <img src={logo} />
-          <h1 className="gradient__text">TMES</h1>
-        </div>
-        <p style={{ fontSize: "1.6rem" }} className="gradient__text">
-          Presents
-        </p> */}
-          <h1 className="text__tmes">
-            <Typewriter
-              options={{
-                strings: ["WELCOME TO TMES"],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </h1>
+          <h1 className="text__tmes">WELCOME TO TMES</h1>
           <p>
             Technology Mining Engineering Society (TMES) aims at bringing a
             closer association among the students and faculty members in the

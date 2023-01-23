@@ -27,8 +27,18 @@
     font-size: 4.5rem;
 }
 
+.Prof {
+    display: flex;
+    justify-content: center;
+
+    video {
+        max-width: 900px;
+        border-radius: 4px;
+    }
+}
+
 .header-content p {
-    font-family: Georgia;
+    // font-family: Georgia;
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;

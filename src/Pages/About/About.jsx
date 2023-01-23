@@ -7,21 +7,25 @@ import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { motion } from "framer-motion";
 import avatar from "../../Assets/avatar.svg";
+import hod from "../../Assets/Profile/hod.jpg";
+import sachin from "../../Assets/Profile/gsec/sachin.jpg";
+import amit from "../../Assets/Profile/gsec/amit.jpg";
+import president from "../../Assets/Profile/president.jpg";
 
 const homeVariants = {
-  hidden : {
+  hidden: {
     opacity: 0,
-    x: "-100vw"
+    x: "-100vw",
   },
-  visible : {
-    opacity : 1,
+  visible: {
+    opacity: 1,
     x: "0vw",
     transition: {
       type: "spring",
-      duration: 1
-    }
+      duration: 1,
+    },
   },
-}
+};
 
 const About = () => {
   return (
@@ -41,7 +45,7 @@ const About = () => {
             <h2>Head Of Department</h2>
             <h3>Prof. Sameer Kumar Pal</h3>
 
-            <img src={avatar} alt="CTH" />
+            <img src={hod} alt="CTH" />
             <div className="links">
               <AiFillFacebook className="icons1" />
               <BsInstagram className="icons2" />
@@ -51,7 +55,7 @@ const About = () => {
           <article>
             <h2>President</h2>
             <h3>Prof. Rakesh Kumar</h3>
-            <img src={avatar} alt="CTH" />
+            <img src={president} alt="CTH" />
             <div className="links">
               <AiFillFacebook className="icons1" />
               <BsInstagram className="icons2" />
@@ -65,17 +69,17 @@ const About = () => {
           <article>
             <h2>Vice President</h2>
             <h3>Sachin Jaiswal</h3>
-            <img src={avatar} alt="CTH" />
+            <img src={sachin} alt="CTH" />
             <div className="links">
               <AiFillFacebook className="icons1" />
-              <BsInstagram className="icons2" />
+              <BsInstagram className="icons2" />z
               <BsTwitter className="icons3" />
             </div>
           </article>
           <article>
             <h2>Treasurer</h2>
             <h3>Amit Kumar</h3>
-            <img src={avatar} alt="CTH" />
+            <img src={amit} alt="CTH" />
             <div className="links">
               <AiFillFacebook className="icons1" />
               <BsInstagram className="icons2" />
@@ -91,11 +95,11 @@ const About = () => {
         <h2 className="Gsec_h2">General Secretaries</h2>
         <section className="info_cards">
           {GSec.map((each, index) => {
-            const { name, img } = each;
+            const { name, imgg } = each;
             return (
               <article key={index}>
                 <h3>{name}</h3>
-                <img src={avatar} alt="G-Sec" />
+                <img src={imgg} alt="G-Sec" />
                 <div className="links">
                   <AiFillFacebook className="icons1" />
                   <BsInstagram className="icons2" />
@@ -120,11 +124,11 @@ const About = () => {
                 <h3 className="head_name">{Head_name}</h3>
                 <section className="info_cards">
                   {data.map((indi_name, index_2) => {
-                    const { name, img } = indi_name;
+                    const { name, imgg } = indi_name;
                     return (
                       <article key={index_2}>
                         <h4>{name}</h4>
-                        <img src={avatar} alt="CTH" />
+                        <img src={imgg} alt="CTH" />
                         <div className="links">
                           <AiFillFacebook className="icons1" />
                           <BsInstagram className="icons2" />

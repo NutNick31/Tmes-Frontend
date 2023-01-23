@@ -1,23 +1,58 @@
+import sahil from "../../Assets/Profile/heads/sahil.jpg";
+import aditya from "../../Assets/Profile/heads/aditya.jpg";
+import aman from "../../Assets/Profile/heads/aman.jpg";
+import amgoth from "../../Assets/Profile/heads/amgoth.jpg";
+import anoop from "../../Assets/Profile/heads/anoop.jpg";
+import chitram from "../../Assets/Profile/heads/chitram.jpg";
+import janvhi from "../../Assets/Profile/heads/janvhi.jpg";
+import raunak from "../../Assets/Profile/heads/raunak.jpg";
+import shiwangi from "../../Assets/Profile/heads/shiwangi.jpg";
+import tanishq from "../../Assets/Profile/heads/tanishq.jpg";
+import tulasi from "../../Assets/Profile/heads/tulasi.jpg";
+import vishal from "../../Assets/Profile/heads/vishal.jpg";
+import himanshu from "../../Assets/Profile/heads/himanshu.jpg";
+import satyam from "../../Assets/Profile/heads/satyam.jpg";
+import siddh from "../../Assets/Profile/heads/siddh.jpg";
+import niharika from "../../Assets/Profile/heads/niharika.jpg";
+import manasvi from "../../Assets/Profile/heads/manasvi.jpg";
+import vidyasagar from "../../Assets/Profile/heads/vidyasagar.jpg";
+import rajesh from "../../Assets/Profile/heads/rajesh.jpg";
+
 const CTH_Heads = [
   {
     Head_name: "Web Heads",
     data: [
       {
+        name: "Himanshu Ranjan",
+        imgg: himanshu,
+        twe: "",
+        insta: "",
+        fb: "",
+        li: "",
+      },
+      {
         name: "Sahil Keshao Lede",
-        img: "",
+        imgg: sahil,
         twe: "",
         insta: "https://www.instagram.com/sahil._k_.lede/",
         fb: "https://www.facebook.com/sahil.lede.3",
         li: "https://www.linkedin.com/in/sahil-lede-092360214",
       },
-      { name: "Himanshu Ranjan", img: "", twe: "", insta: "", fb: "", li: "" },
       {
         name: "Vishal Patel",
-        img: "",
+        imgg: vishal,
         twe: "",
         insta: "https://www.instagram.com/vshal007/",
         fb: "https://www.facebook.com/profile.php?id=100055356487184",
         li: "https://www.linkedin.com/in/vishal-patel-536b321a1/",
+      },
+      {
+        name: "Rajesh Kumar Singh",
+        imgg: rajesh,
+        twe: "",
+        insta: "https://www.instagram.com/sahil._k_.lede/",
+        fb: "https://www.facebook.com/sahil.lede.3",
+        li: "https://www.linkedin.com/in/rajesh-kumar-singh-2933371aa/",
       },
     ],
   },
@@ -26,7 +61,7 @@ const CTH_Heads = [
     data: [
       {
         name: "Raunak Jhunjhunwala",
-        img: "",
+        imgg: raunak,
         twe: "",
         insta: "",
         fb: "",
@@ -34,16 +69,23 @@ const CTH_Heads = [
       },
       {
         name: "Satyam Kumar",
-        img: "",
+        imgg: satyam,
         twe: "",
         insta: "https://www.instagram.com/satyam_16_09/",
         fb: "https://www.facebook.com/profile.php?id=100008159530339",
         li: "https://www.linkedin.com/in/satyam-kumar-193a99235/",
       },
-      { name: "Janhvi Haldvania", img: "", twe: "", insta: "", fb: "", li: "" },
+      {
+        name: "Janhvi Haldvania",
+        imgg: janvhi,
+        twe: "",
+        insta: "",
+        fb: "",
+        li: "",
+      },
       {
         name: "Vidyasagar",
-        img: "",
+        imgg: vidyasagar,
         twe: "https://twitter.com/RvsrVidyasagar",
         insta: "https://www.instagram.com/vidyasagar___rvsr/",
         fb: "https://www.facebook.com/vidyasagar.rvsr",
@@ -56,7 +98,7 @@ const CTH_Heads = [
     data: [
       {
         name: "Aman Goswami",
-        img: "",
+        imgg: aman,
         twe: "",
         insta: "",
         fb: "https://www.facebook.com/profile.php?id=100058652051714&mibextid=ZbWKwL",
@@ -64,7 +106,7 @@ const CTH_Heads = [
       },
       {
         name: "Vyde Siddhartha",
-        img: "",
+        imgg: siddh,
         twe: "",
         insta:
           "https://www.instagram.com/invites/contact/?i=1n7jv2aucybv8&utm_content=44e17tq",
@@ -73,7 +115,7 @@ const CTH_Heads = [
       },
       {
         name: "Emmadi Manasvi",
-        img: "",
+        imgg: manasvi,
         twe: "",
         insta: "",
         fb: "https://www.facebook.com/manasvi.emmadi?mibextid=ZbWKwL",
@@ -81,7 +123,7 @@ const CTH_Heads = [
       },
       {
         name: "Amgoth Jithender Kumar Naik",
-        img: "",
+        imgg: amgoth,
         twe: "",
         insta: "",
         fb: "",
@@ -92,10 +134,10 @@ const CTH_Heads = [
   {
     Head_name: "Publicity Heads",
     data: [
-      { name: "Aditya Raj", img: "", twe: "", insta: "", fb: "", li: "" },
+      { name: "Aditya Raj", imgg: aditya, twe: "", insta: "", fb: "", li: "" },
       {
         name: "Anoop Singh",
-        img: "",
+        imgg: anoop,
         twe: "",
         insta: "https://www.instagram.com/anoopsingh_1/",
         fb: "https://www.facebook.com/profile.php?id=100009072704649&mibextid=ZbWKwL",
@@ -103,13 +145,20 @@ const CTH_Heads = [
       },
       {
         name: "Niharika Singh",
-        img: "",
+        imgg: niharika,
         twe: "",
         insta: "https://www.instagram.com/niharikasingh0208/",
         fb: "https://www.facebook.com/profile.php?id=100059521434357",
         li: "https://www.linkedin.com/in/niharika-singh-49133a223",
       },
-      { name: "Tanishq Agarwal", img: "", twe: "", insta: "", fb: "", li: "" },
+      {
+        name: "Tanishq Agarwal",
+        imgg: tanishq,
+        twe: "",
+        insta: "",
+        fb: "",
+        li: "",
+      },
     ],
   },
   {
@@ -117,7 +166,7 @@ const CTH_Heads = [
     data: [
       {
         name: "Shiwangi Prakash",
-        img: "",
+        imgg: shiwangi,
         twe: "",
         insta: "https://www.instagram.com/shiwangi_prakash_/",
         fb: "https://www.facebook.com/profile.php?id=100085210257327&mibextid=ZbWKwL",
@@ -125,7 +174,7 @@ const CTH_Heads = [
       },
       {
         name: "Chitram Om Sri Vasthav",
-        img: "",
+        imgg: chitram,
         twe: "",
         insta:
           "https://www.instagram.com/invites/contact/?i=1wr6z23305w06&utm_content=6qq1kuw",
@@ -134,7 +183,7 @@ const CTH_Heads = [
       },
       {
         name: "Kadali Sri Tulasi",
-        img: "",
+        imgg: tulasi,
         twe: "",
         insta: "",
         fb: "",
