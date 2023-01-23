@@ -1,13 +1,12 @@
 import React from "react";
 import "./TMES.scss";
-import Brand from "./Brand";
 import Prof from "./Prof";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { C_Btn } from "../../Components";
 import tmes_home from "../../Assets/tmes_home.jpg";
 import Posters from "../../Components/Posters/Posters";
-import list from "./posterlist";
+import list from "./image";
 import Swiper_Scroll from "../../Pages/Home/Swiper_Scroll";
 
 const homeVariants = {

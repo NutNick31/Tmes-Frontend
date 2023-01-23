@@ -15,7 +15,7 @@ const Posters = ({ list }) => {
       <Marquee
         style={{ margin: "0 1rem" }}
         pauseOnHover={true}
-        speed={50}
+        speed={100}
         gradient={false}
       >
         {list.map((d) => {

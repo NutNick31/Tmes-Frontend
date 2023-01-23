@@ -5,6 +5,7 @@
     // justify-content: center;
     // align-items: center;
 
+
     .carousel2_title {
         text-align: center;
         font-size: max(2vw, 2rem);
@@ -17,19 +18,17 @@
     }
 
     .mySwiper {
-        margin: 4rem 0;
-
+        margin: 2rem;
 
         .swiper-slide {
-            border-radius: 1%;
-            max-width: min(90%, 500px);
-
-
-            object-fit: cover;
+            height: 400px;
+            width: auto;
 
             img {
-                // width: 80vw;
-                width: 100%;
+                object-fit: cover;
+                // width: 100%;
+
+                border-radius: 1%;
                 height: 100%;
             }
         }

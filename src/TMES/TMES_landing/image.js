@@ -1,43 +1,32 @@
-import a1 from './Assets/assets/01.jpg';
-import a2 from './Assets/assets/02.jpg';
-import a3 from './Assets/assets/03.jpg';
-import a4 from './Assets/assets/04.jpg';
-import a5 from './Assets/assets/05.jpg';
-import a6 from './Assets/assets/06.jpg';
-import a7 from './Assets/assets/07.jpg';
-import a8 from './Assets/assets/08.jpg';
-import a9 from './Assets/assets/09.jpg';
-import a10 from './Assets/assets/10.jpg';
-import a11 from './Assets/assets/11.jpg';
-import A12 from './Assets/assets/12.jpg';
-import A13 from './Assets/assets/12.jpg';
-import A14 from './Assets/assets/13.jpg';
-import A15 from './Assets/assets/14.jpg';
-import A16 from './Assets/assets/15.jpg';
-import A17 from './Assets/assets/16.jpg';
-import A18 from './Assets/assets/17.jpg'
-import A19 from './Assets/assets/19.jpg';
-import A20 from './Assets/assets/20.jpg';
-import A21 from './Assets/assets/21.jpg';
-import A22 from './Assets/assets/22.jpg';
-import A23 from './Assets/assets/23.jpg';
-import A24 from './Assets/assets/24.jpg';
-import A25 from './Assets/assets/25.jpg';
-import A26 from './Assets/assets/blog01.png';
-import A27 from './Assets/assets/blog02.png';
-import A28 from './Assets/assets/blog03.png';
-import A29 from './Assets/assets/blog04.png';
-import A30 from './Assets/assets/blog04.png';
-import A31 from './Assets/assets/blog05.png';
-import A32 from './Assets/assets/dropbox.png';
-import A33 from './Assets/assets/google.png';
-import A34 from './Assets/assets/logo.svg';
-import A35 from './Assets/assets/logo.png';
-import A36 from './Assets/assets/people.png';
-import A37 from './Assets/assets/possibility.png';
-import A38 from './Assets/assets/shopify.png';
-import A39 from './Assets/assets/slack.png';
+import a4 from "../../Assets/assets/04.jpg";
+import a5 from "../../Assets/assets/05.jpg";
+import a7 from "../../Assets/assets/07.jpg";
+import a8 from "../../Assets/assets/08.jpg";
+import a10 from "../../Assets/assets/10.jpg";
+import A13 from "../../Assets/assets/13.jpg";
+import A14 from "../../Assets/assets/14.jpg";
+import A16 from "../../Assets/assets/16.jpg";
+import A17 from "../../Assets/assets/17.jpg";
+import A18 from "../../Assets/assets/18.jpg";
+import A19 from "../../Assets/assets/19.jpg";
+import A20 from "../../Assets/assets/20.jpg";
+import A21 from "../../Assets/assets/21.jpg";
+import A22 from "../../Assets/assets/22.jpg";
 
-const image = [a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,A12,A13,A14,A15,A15,A16,A17,A18,A19,A20,A21,A22,A23,A24,A25,A26,A27,A28,
-A29,A30,A31,A32,A33,A34,A35,A36,A37,A38,A39];
+const image = [
+  a4,
+  a5,
+  a7,
+  a8,
+  a10,
+  A13,
+  A14,
+  A16,
+  A17,
+  A18,
+  A19,
+  A20,
+  A21,
+  A22,
+];
 export default image;

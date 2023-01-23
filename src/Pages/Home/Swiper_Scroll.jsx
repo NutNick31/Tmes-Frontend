@@ -26,6 +26,8 @@ export default function Carousel2({ imgs }) {
           delay: 2000,
           disableOnInteraction: false,
         }}
+        loop={true}
+        loopFillGroupWithBlank={true}
         // fadeEffect={{ crossFade: true }}
         // coverflowEffect={{
         //   rotate: 10,
