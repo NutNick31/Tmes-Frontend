@@ -54,6 +54,11 @@ const data = [
     type: "Online Events",
     data: [
       {
+        to: "/great-step/events/gth",
+        name: "Guess The Theme",
+        info: "Pull your creative skills out and design an eye-catching T-shirt based on the GREAT STEP theme. Participants are required to submit a T-shirt design based on the theme of GREAT STEP.",
+      },
+      {
         to: "/great-step/events/T_Shirt_Design",
         name: "T-Shirt Design",
         info: "Pull your creative skills out and design an eye-catching T-shirt based on the GREAT STEP theme. Participants are required to submit a T-shirt design based on the theme of GREAT STEP.",

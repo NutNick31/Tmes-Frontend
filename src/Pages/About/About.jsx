@@ -142,18 +142,26 @@ const About = () => {
                 <h3>{name}</h3>
                 <img src={imgg} alt="G-Sec" />
                 <div className="links">
-                  <a target="blank" href={fb}>
-                    <AiFillFacebook className="icons1 icon" />
-                  </a>
-                  <a target="blank" href={insta}>
-                    <BsInstagram className="icons2 icon" />
-                  </a>
-                  <a target="blank" href={twe}>
-                    <BsTwitter className="icons3 icon" />
-                  </a>
-                  <a target="blank" href={li}>
-                    <AiFillLinkedin className="icons3 icon" />
-                  </a>
+                  {fb && (
+                    <a target="blank" href={fb}>
+                      <AiFillFacebook className="icons1 icon" />
+                    </a>
+                  )}
+                  {insta && (
+                    <a target="blank" href={insta}>
+                      <BsInstagram className="icons2 icon" />
+                    </a>
+                  )}
+                  {twe && (
+                    <a target="blank" href={twe}>
+                      <BsTwitter className="icons3 icon" />
+                    </a>
+                  )}
+                  {li && (
+                    <a target="blank" href={li}>
+                      <AiFillLinkedin className="icons3 icon" />
+                    </a>
+                  )}
                 </div>
               </article>
             );

@@ -9,30 +9,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
 
 function App() {
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3200);
-  // }, [loading]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3200);
+  }, [loading]);
 
   return (
     <div className="App container-fluid p-0">
-      {/* <AnimatedCursor
-        color="8, 164, 167"
-        innerSize={12}
-        style={{ zIndex: "1000" }}
-      /> */}
-      {/* {loading && <Loader />} */}
-      {/* {!loading && ( */}
-      <>
-        <AnimatePresence>
-          <Navbar />
-          <Routing />
-          <Footer />
-        </AnimatePresence>
-      </>
-      {/* )} */}
+      {loading && <Loader />}
+      {!loading && (
+        <>
+          <AnimatePresence>
+            <Navbar />
+            <Routing />
+            <Footer />
+          </AnimatePresence>
+        </>
+      )}
     </div>
   );
 }
